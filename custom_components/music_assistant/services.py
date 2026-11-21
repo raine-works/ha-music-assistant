@@ -59,6 +59,7 @@ from .const import (
     ATTR_USERNAME,
     DOMAIN,
 )
+from .extended import async_setup_extended_services
 from .helpers import catch_user_not_found, get_music_assistant_client, user_from_context
 from .schemas import (
     LIBRARY_RESULTS_SCHEMA,
@@ -203,6 +204,8 @@ def async_setup_services(hass: HomeAssistant) -> None:
         func="_async_handle_get_queue",
         supports_response=SupportsResponse.ONLY,
     )
+    # The fork's own actions (extended.py)
+    async_setup_extended_services(hass)
 
 
 async def handle_search(call: ServiceCall) -> ServiceResponse:

@@ -568,6 +568,80 @@
         }
       },
       "name": "Transfer queue"
+    },
+    "get_queue_items": {
+      "name": "Get queue items",
+      "description": "Gets a page of a speaker's queue from the playing item (or an offset), with what it came from and its settings.",
+      "fields": {
+        "offset": {
+          "name": "Offset",
+          "description": "The queue position to start at; the playing item when empty."
+        },
+        "limit": {
+          "name": "Limit",
+          "description": "How many items."
+        }
+      }
+    },
+    "edit_queue": {
+      "name": "Edit queue",
+      "description": "Plays an item of a speaker's queue, moves it, removes it, or resumes the queue (after a live input).",
+      "fields": {
+        "action": {
+          "name": "Action",
+          "description": "play, move, remove or resume."
+        },
+        "item": {
+          "name": "Item",
+          "description": "The item: its queue item id, or an index to play."
+        },
+        "shift": {
+          "name": "Shift",
+          "description": "How many places to move it (negative: up)."
+        }
+      }
+    },
+    "set_dont_stop_the_music": {
+      "name": "Set Don't stop the music",
+      "description": "Turns Music Assistant's Don't stop the music on or off for a speaker's queue.",
+      "fields": {
+        "enabled": {
+          "name": "Enabled",
+          "description": "Keep playing similar songs when the queue ends."
+        }
+      }
+    },
+    "get_podcast_episodes": {
+      "name": "Get podcast episodes",
+      "description": "Gets a podcast's episodes, newest first, with the listener's progress.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Music Assistant server",
+          "description": "Empty when there's one."
+        },
+        "uri": {
+          "name": "Podcast",
+          "description": "The podcast's URI (<provider>://podcast/<id>)."
+        },
+        "offset": {
+          "name": "Offset",
+          "description": "Episodes to skip."
+        },
+        "limit": {
+          "name": "Limit",
+          "description": "How many episodes."
+        }
+      }
+    },
+    "get_party_url": {
+      "name": "Get Party link",
+      "description": "Gets the Party plugin's guest link (none while guest access is off).",
+      "fields": {
+        "config_entry_id": {
+          "name": "Music Assistant server",
+          "description": "Empty when there's one."
+        }
+      }
     }
   }
 }

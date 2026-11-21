@@ -14,13 +14,21 @@ and Home Assistant goes back to the built-in one.
 
 ## What it adds
 
-Coming in the next releases (see [CHANGELOG.md](CHANGELOG.md)):
+Actions (see [CHANGELOG.md](CHANGELOG.md) for each release):
 
-- **The queue:** every item from the playing one (`get_queue_items`), and edits: play an item, move
-  it, remove it, resume the queue after a live input (`edit_queue`)
-- **Podcast episodes:** a podcast's episodes, newest first, with your progress
-- **Party:** Music Assistant's Party guest link, and its Party dashboard shown on (or taken off) your
-  TVs
+| Action | What it does |
+| --- | --- |
+| `music_assistant.get_queue_items` | A speaker's whole queue, a page at a time from the playing item (or an `offset`), each item's name, artist, album, length, cover and URI, with what the queue came from and its shuffle, repeat and Don't stop the music. The built-in `get_queue` has only the current and next item. |
+| `music_assistant.edit_queue` | `play`, `move` (by `shift` places), `remove` an item, or `resume` the queue after a live input. |
+| `music_assistant.set_dont_stop_the_music` | Turns Don't stop the music on or off for a speaker's queue. |
+| `music_assistant.get_podcast_episodes` | A podcast's episodes by its URI, newest first, with your progress (resume point, played) and short show notes. |
+| `music_assistant.get_party_url` | The Party plugin's guest link (none while guest access is off). |
+
+They use the integration's own connection to Music Assistant: no token to keep in `secrets.yaml`.
+
+The Party dashboard on a TV is the built-in integration's already: each display Music Assistant
+can cast to is a media player; `media_player.play_media` with content type `dashboard` and id
+`party` shows it, and `media_player.turn_off` takes it off.
 
 ## Installation
 

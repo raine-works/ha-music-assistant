@@ -274,3 +274,89 @@ get_library:
       example: "john"
       selector:
         text:
+
+# The fork's own actions (extended.py)
+get_queue_items:
+  target:
+    entity:
+      domain: media_player
+      integration: music_assistant
+  fields:
+    offset:
+      selector:
+        number:
+          min: 0
+          max: 100000
+          mode: box
+    limit:
+      default: 50
+      selector:
+        number:
+          min: 1
+          max: 500
+          mode: box
+edit_queue:
+  target:
+    entity:
+      domain: media_player
+      integration: music_assistant
+  fields:
+    action:
+      required: true
+      selector:
+        select:
+          options:
+            - play
+            - move
+            - remove
+            - resume
+    item:
+      selector:
+        text:
+    shift:
+      default: 0
+      selector:
+        number:
+          min: -1000
+          max: 1000
+          mode: box
+set_dont_stop_the_music:
+  target:
+    entity:
+      domain: media_player
+      integration: music_assistant
+  fields:
+    enabled:
+      required: true
+      selector:
+        boolean:
+get_podcast_episodes:
+  fields:
+    config_entry_id:
+      selector:
+        config_entry:
+          integration: music_assistant
+    uri:
+      required: true
+      selector:
+        text:
+    offset:
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 100000
+          mode: box
+    limit:
+      default: 50
+      selector:
+        number:
+          min: 1
+          max: 200
+          mode: box
+get_party_url:
+  fields:
+    config_entry_id:
+      selector:
+        config_entry:
+          integration: music_assistant

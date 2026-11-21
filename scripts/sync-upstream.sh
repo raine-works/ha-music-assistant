@@ -17,7 +17,7 @@ git -C "$work/core" sparse-checkout set homeassistant/components/music_assistant
 core="$work/core"
 
 rsync -a --delete --exclude translations "$core/homeassistant/components/music_assistant/" "$root/custom_components/music_assistant/"
-rsync -a --delete "$core/tests/components/music_assistant/" "$root/tests/components/music_assistant/"
+rsync -a --delete --exclude 'test_extended*.py' "$core/tests/components/music_assistant/" "$root/tests/components/music_assistant/"
 cp "$core/tests/components/conftest.py" "$root/tests/components/conftest.py"
 cp "$core/tests/components/tts/common.py" "$root/tests/components/tts/common.py"
 cp "$core/tests/components/hassio/__init__.py" "$core/tests/components/hassio/common.py" "$root/tests/components/hassio/"

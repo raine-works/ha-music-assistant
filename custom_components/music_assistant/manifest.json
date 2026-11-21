@@ -10,8 +10,7 @@
     "media_entertainment.music_radio_services"
   ],
   "codeowners": [
-    "@music-assistant",
-    "@arturpragacz"
+    "@raine-works"
   ],
   "config_flow": true,
   "connectivity": [
@@ -20,7 +19,7 @@
   "dependencies": [
     "auth"
   ],
-  "documentation": "https://www.home-assistant.io/integrations/music_assistant",
+  "documentation": "https://github.com/raine-works/ha-music-assistant",
   "integration_type": "service",
   "iot_class": "local_push",
   "loggers": [
@@ -33,5 +32,6 @@
   "zeroconf": [
     "_mass._tcp.local."
   ],
-  "version": "2026.11.2"
+  "version": "2026.11.2.1",
+  "issue_tracker": "https://github.com/raine-works/ha-music-assistant/issues"
 }
