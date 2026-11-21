@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.11.2.2
+
+- Passes Home Assistant's and HACS's validation: the manifest's keys sorted, a minimum
+  music-assistant-client version (Home Assistant pins it itself), brand icons.
+
 ## 2026.11.2.1
 
 Home Assistant 2026.11.2's integration, plus (extended.py; the built-in integration's code is
