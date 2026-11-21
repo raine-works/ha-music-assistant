@@ -1,6 +1,6 @@
 # Music Assistant for Home Assistant (raine-works) documentation
 
-![Music Assistant (raine-works)](images/logo.svg)
+![Music Assistant](images/logo.png)
 
 A fork of Home Assistant's built-in Music Assistant integration with more of Music Assistant in it. It keeps the domain `music_assistant`, so it replaces the built-in integration in place.
 

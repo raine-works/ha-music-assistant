@@ -7,7 +7,6 @@
 | `custom_components/music_assistant/` | The integration: Home Assistant core's at the followed release, plus `extended.py` (the fork's actions) |
 | `tests/components/music_assistant/` | Core's tests for it, plus the fork's `test_extended.py` |
 | `scripts/sync-upstream.sh` | Brings a Home Assistant release in: see [Following Home Assistant](following-home-assistant.md) |
-| `scripts/render-brand.sh` | Renders the brand icons from `assets/logo.svg` |
 | `UPSTREAM`, `NOTICE`, `LICENSE` | The followed release, attribution, and Apache 2.0 |
 | `hacs.json` | The Marketplace's repository metadata |
 
@@ -28,7 +27,7 @@ Keep the fork's changes small and in `extended.py`: the pure functions there (`q
 
 ## Brand icons
 
-`custom_components/music_assistant/brand/icon.png` (256px) and `icon@2x.png` (512px) are rendered from [assets/logo.svg](../assets/logo.svg) by `scripts/render-brand.sh` (headless Chrome; `CHROME` overrides its path).
+`custom_components/music_assistant/brand/icon.png` (256px) and `icon@2x.png` (512px) are Music Assistant's own logo, from Home Assistant's brands (`https://brands.home-assistant.io/music_assistant/icon.png` and `icon@2x.png`). Music Assistant's name and logo are its project's; this fork isn't affiliated with or endorsed by the Music Assistant project or the Open Home Foundation.
 
 ## Releasing
 

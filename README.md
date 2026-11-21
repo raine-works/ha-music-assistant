@@ -16,6 +16,12 @@ and Home Assistant goes back to the built-in one.
 [![Home Assistant Marketplace](https://img.shields.io/badge/Home_Assistant-Marketplace-41BDF5.svg?style=for-the-badge)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=raine-works&repository=ha-music-assistant&category=integration)
 [![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg?style=for-the-badge)](LICENSE)
 
+<a href="https://buymeacoffee.com/raineworks"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
+
+> This project is not affiliated with, authorized, or endorsed by the Music Assistant project or
+> the Open Home Foundation. Music Assistant's name and logo are its project's, used here to say
+> what the integration is for.
+
 ## What it adds
 
 Actions (see [CHANGELOG.md](CHANGELOG.md) for each release):
@@ -67,6 +73,13 @@ Assistant's own tests run on every change (`pytest`, on `pytest-homeassistant` a
 
 Use the release matching your Home Assistant's: the built-in integration changes with Home
 Assistant, and so does this.
+
+## ☕ Support
+
+If you find this project helpful, consider buying me a coffee to support continued
+maintenance and development:
+
+<a href="https://buymeacoffee.com/raineworks"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
 
 ## License
 

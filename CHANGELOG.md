@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.11.2.3
+
+- The icon is Music Assistant's own (from Home Assistant's brands), with a note that this fork
+  isn't affiliated with the Music Assistant project. The README has the Buy Me a Coffee button.
+
 ## 2026.11.2.2
 
 - Passes Home Assistant's and HACS's validation: the manifest's keys sorted, a minimum
