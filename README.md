@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="custom_components/music_assistant/brand/icon@2x.png" alt="Music Assistant (raine-works)" width="128">
+</p>
+
 # Music Assistant for Home Assistant (raine-works)
 
 Home Assistant's own [Music Assistant](https://music-assistant.io) integration, with more of Music
@@ -9,7 +13,7 @@ it in place**: your config entry, speakers, entity ids, history and every `music
 action in your automations stay as they are, and the new actions are added beside them. Remove it
 and Home Assistant goes back to the built-in one.
 
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
+[![Home Assistant Marketplace](https://img.shields.io/badge/Home_Assistant-Marketplace-41BDF5.svg?style=for-the-badge)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=raine-works&repository=ha-music-assistant&category=integration)
 [![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg?style=for-the-badge)](LICENSE)
 
 ## What it adds
@@ -32,13 +36,27 @@ can cast to is a media player; `media_player.play_media` with content type `dash
 
 ## Installation
 
-1. In HACS, add `https://github.com/raine-works/ha-music-assistant` as a custom repository
-   (Integration), then install **Music Assistant (raine-works)**.
+[![Open your Home Assistant instance and open this repository in the Home Assistant Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=raine-works&repository=ha-music-assistant&category=integration)
+
+1. Open the Home Assistant Marketplace (Settings → Marketplace, or the button above), add
+   `https://github.com/raine-works/ha-music-assistant` as a custom repository (type Integration) if
+   **Music Assistant (raine-works)** isn't listed, and download it.
 2. Restart Home Assistant. Home Assistant logs that the built-in Music Assistant integration is
    overridden by a custom one; that's this.
 
 Already set up Music Assistant? Nothing else to do. New to it? Add the Music Assistant integration
-as usual (Settings → Devices & services).
+as usual (Settings → Devices & services). Details: [docs/installation.md](docs/installation.md).
+
+## Documentation
+
+| Guide | |
+| :--- | :--- |
+| [Installation](docs/installation.md) | Replacing the built-in integration, matching the release to Home Assistant, going back |
+| [What it adds](docs/what-it-adds.md) | The five actions and the Party dashboard |
+| [Actions](docs/reference/actions.md) | Every added action: target, fields and response |
+| [Following Home Assistant](docs/following-home-assistant.md) | Versions, syncing, releases |
+| [Troubleshooting](docs/troubleshooting.md) | Common messages and fixes |
+| [Development](docs/development.md) | Tests, lint, brand icons, releasing |
 
 ## Following Home Assistant
 
