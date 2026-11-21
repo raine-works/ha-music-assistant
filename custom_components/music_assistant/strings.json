@@ -621,7 +621,7 @@
         },
         "uri": {
           "name": "Podcast",
-          "description": "The podcast's URI (<provider>://podcast/<id>)."
+          "description": "The podcast's Music Assistant URI, such as spotify://podcast/123."
         },
         "offset": {
           "name": "Offset",
