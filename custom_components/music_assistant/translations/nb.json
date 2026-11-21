@@ -1,0 +1,33 @@
+{
+    "config": {
+        "step": {
+            "hassio_confirm": {
+                "description": "Vil du legge til Music Assistant-serveren i Home Assistant?",
+                "title": "Oppdaget Music Assistant-appen"
+            },
+            "reauth_confirm": {
+                "description": "Autentiseringstokenet for Music Assistant-serveren `{url}` er ikke lenger gyldig. Vennligst autentiser p\u00e5 nytt for \u00e5 fortsette \u00e5 bruke integrasjonen."
+            }
+        }
+    },
+    "entity": {
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "off": "Av"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "sleep": {
+                "state": {
+                    "0": "Av"
+                }
+            }
+        }
+    }
+}

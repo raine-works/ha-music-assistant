@@ -1,0 +1,22 @@
+{
+    "config": {
+        "error": {
+            "unknown": "Nieoczekiwany b\u0142\u0105d"
+        }
+    },
+    "entity": {
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "target": "Cel",
+                            "tokyo": "Ko\u015bci\u00f3\u0142 w Tokio",
+                            "tv_program": "Program TV"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

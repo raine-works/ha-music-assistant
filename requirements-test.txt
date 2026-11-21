@@ -1,0 +1,16 @@
+# Home Assistant's own test harness, at the release this fork follows (custom_components/
+# music_assistant/manifest.json's version)
+pytest-homeassistant==2026.11.2
+music-assistant-client==1.6.0
+# What the integration's dependencies need (hassio, tts, ffmpeg, network), and the hardware
+# integration core's shared Supervisor fixture patches; core's own test setup installs them
+aiohasupervisor==0.8.1
+aiousbwatcher==1.1.2
+ha-ffmpeg==3.2.2
+ha-silabs-firmware-client==0.4.0
+ifaddr==0.2.0
+mutagen==1.48.1
+pygbl==1.2.0
+serialx==1.15.1
+universal-silabs-flasher==1.3.0
+ruff

@@ -1,0 +1,513 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "L'appareil est d\u00e9j\u00e0 configur\u00e9",
+            "already_in_progress": "La configuration est d\u00e9j\u00e0 en cours. Veuillez terminer la configuration actuelle avant de recommencer.",
+            "auth_error": "Erreur d'authentification, veuillez r\u00e9essayer.",
+            "auth_failed": "L'authentification a \u00e9chou\u00e9, veuillez r\u00e9essayer.",
+            "cannot_connect": "\u00c9chec de la connexion",
+            "invalid_server_version": "Le serveur Music Assistant n'est pas \u00e0 la bonne version",
+            "unknown": "Erreur inattendue"
+        },
+        "error": {
+            "auth_failed": "L'authentification a \u00e9chou\u00e9, veuillez r\u00e9essayer.",
+            "cannot_connect": "\u00c9chec de la connexion",
+            "invalid_server_version": "Le serveur Music Assistant n'est pas \u00e0 la bonne version",
+            "unknown": "Erreur inattendue"
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Jeton d'acc\u00e8s longue dur\u00e9e"
+                },
+                "data_description": {
+                    "token": "Cr\u00e9ez un jeton d'acc\u00e8s longue dur\u00e9e dans les param\u00e8tres de votre serveur Music Assistant et collez-le ici."
+                },
+                "title": "Saisir le jeton d'acc\u00e8s longue dur\u00e9e"
+            },
+            "discovery_confirm": {
+                "description": "Souhaitez-vous ajouter le serveur Music Assistant `{url}` \u00e0 Home Assistant\u00a0?",
+                "title": "Serveur Music Assistant d\u00e9couvert"
+            },
+            "hassio_confirm": {
+                "description": "Voulez-vous ajouter le serveur Music Assistant \u00e0 Home Assistant\u00a0?",
+                "title": "Application Music Assistant d\u00e9couverte"
+            },
+            "reauth_confirm": {
+                "description": "Le jeton d'authentification du serveur Music Assistant `{url}` n'est plus valide. Veuillez vous r\u00e9authentifier pour continuer \u00e0 utiliser l'int\u00e9gration.",
+                "title": "R\u00e9authentification requise"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "Ajouter la chanson en cours aux favoris"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "St\u00e9r\u00e9o 11 canaux",
+                            "2ch_stereo": "St\u00e9r\u00e9o 2 canaux",
+                            "5ch_stereo": "St\u00e9r\u00e9o 5 canaux",
+                            "7ch_stereo": "St\u00e9r\u00e9o 7 canaux",
+                            "9ch_stereo": "St\u00e9r\u00e9o 9 canaux",
+                            "action_game": "Jeu d'action",
+                            "adventure": "Aventure",
+                            "all_ch_stereo": "St\u00e9r\u00e9o tous canaux",
+                            "amsterdam": "Salle d'Amsterdam",
+                            "arena": "Ar\u00e8ne",
+                            "bass_booster": "Amplificateur de basses",
+                            "bottom_line": "The Bottom Line",
+                            "cellar_club": "Club en cave",
+                            "chamber": "Musique de chambre",
+                            "concert": "Concert en direct",
+                            "disco": "Disco",
+                            "drama": "Drame",
+                            "enhanced": "Am\u00e9lior\u00e9",
+                            "frankfurt": "Salle de Francfort",
+                            "freiburg": "\u00c9glise de Fribourg",
+                            "game": "Jeu",
+                            "jazz_club": "Club de jazz",
+                            "mono_movie": "Film mono",
+                            "movie": "Film",
+                            "munich": "Salle de Munich",
+                            "munich_a": "Salle de Munich A",
+                            "munich_b": "Salle de Munich B",
+                            "music": "Musique",
+                            "music_video": "Clip musical",
+                            "my_surround": "Mon surround",
+                            "off": "D\u00e9sactiv\u00e9",
+                            "pavilion": "Pavillon",
+                            "recital_opera": "R\u00e9cital/op\u00e9ra",
+                            "roleplaying_game": "Jeu de r\u00f4le",
+                            "roxy_theatre": "The Roxy Theatre",
+                            "royaumont": "\u00c9glise de Royaumont",
+                            "sci-fi": "Science-fiction",
+                            "spectacle": "Spectacle",
+                            "sports": "Sports",
+                            "standard": "Standard",
+                            "stereo": "St\u00e9r\u00e9o",
+                            "straight": "Direct",
+                            "stuttgart": "Salle de Stuttgart",
+                            "surr_decoder": "D\u00e9codeur surround",
+                            "talk_show": "Talk-show",
+                            "target": "Cible",
+                            "tokyo": "\u00c9glise de Tokyo",
+                            "tv_program": "Programme TV",
+                            "usa_a": "Salle aux \u00c9tats-Unis A",
+                            "usa_b": "Salle aux \u00c9tats-Unis B",
+                            "vienna": "Salle de Vienne",
+                            "village_gate": "Village Gate",
+                            "village_vanguard": "Village Vanguard",
+                            "warehouse_loft": "Loft d'entrep\u00f4t"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "Basses"
+            },
+            "dialogue_level": {
+                "name": "Niveau des dialogues"
+            },
+            "dialogue_lift": {
+                "name": "Rehaussement des dialogues"
+            },
+            "dts_dialogue_control": {
+                "name": "Contr\u00f4le des dialogues DTS"
+            },
+            "equalizer_high": {
+                "name": "\u00c9galiseur aigus"
+            },
+            "equalizer_low": {
+                "name": "\u00c9galiseur graves"
+            },
+            "equalizer_mid": {
+                "name": "\u00c9galiseur m\u00e9diums"
+            },
+            "subwoofer_volume": {
+                "name": "Volume du caisson de basses"
+            },
+            "treble": {
+                "name": "Aigus"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "Variateur",
+                "state": {
+                    "auto": "Auto"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Mode \u00e9galiseur",
+                "state": {
+                    "auto": "Auto",
+                    "bypass": "Bypass",
+                    "manual": "Manuel"
+                }
+            },
+            "link_audio_delay": {
+                "name": "D\u00e9lai audio de liaison",
+                "state": {
+                    "audio_sync": "Synchronisation audio",
+                    "audio_sync_off": "Synchronisation audio d\u00e9sactiv\u00e9e",
+                    "audio_sync_on": "Synchronisation audio activ\u00e9e",
+                    "balanced": "\u00c9quilibr\u00e9",
+                    "lip_sync": "Synchronisation labiale"
+                }
+            },
+            "link_audio_quality": {
+                "name": "Qualit\u00e9 audio de liaison",
+                "state": {
+                    "compressed": "Compress\u00e9",
+                    "uncompressed": "Non compress\u00e9"
+                }
+            },
+            "link_control": {
+                "name": "Contr\u00f4le de liaison",
+                "state": {
+                    "speed": "Vitesse",
+                    "stability": "Stabilit\u00e9",
+                    "standard": "Standard"
+                }
+            },
+            "sleep": {
+                "name": "Minuterie de mise en veille",
+                "state": {
+                    "0": "D\u00e9sactiv\u00e9",
+                    "120": "120\u00a0minutes",
+                    "30": "30 minutes",
+                    "60": "60 minutes",
+                    "90": "90 minutes"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Type de d\u00e9codeur surround",
+                "state": {
+                    "auto": "Auto",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x Jeu",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x Film",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x Musique",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 Cin\u00e9ma",
+                    "dts_neo6_music": "DTS Neo:6 Musique",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "Basculer"
+                }
+            },
+            "tone_control_mode": {
+                "name": "Mode de contr\u00f4le de tonalit\u00e9",
+                "state": {
+                    "auto": "Auto",
+                    "bypass": "Bypass",
+                    "manual": "Manuel"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "DRC adaptatif"
+            },
+            "bass_extension": {
+                "name": "Extension des basses"
+            },
+            "clear_voice": {
+                "name": "Voix claire"
+            },
+            "enhancer": {
+                "name": "Rehausseur"
+            },
+            "extra_bass": {
+                "name": "Basses renforc\u00e9es"
+            },
+            "party_mode": {
+                "name": "Mode festif"
+            },
+            "pure_direct": {
+                "name": "Pure Direct"
+            },
+            "speaker_a": {
+                "name": "Enceinte A"
+            },
+            "speaker_b": {
+                "name": "Enceinte B"
+            },
+            "surround_3d": {
+                "name": "Surround 3D"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "Nom du r\u00e9seau"
+            }
+        }
+    },
+    "exceptions": {
+        "app_not_running": {
+            "message": "L'application {app} n'est pas encore d\u00e9marr\u00e9e."
+        },
+        "dashboard_display_not_available": {
+            "message": "L'\u00e9cran {display} n'est pas disponible."
+        },
+        "dashboard_invalid_media_type": {
+            "message": "Les \u00e9crans de tableau de bord n'acceptent que le type de m\u00e9dia {expected}, re\u00e7u : {media_type}."
+        },
+        "dashboard_media_not_found": {
+            "message": "Le m\u00e9dia {media_content_id} est introuvable."
+        },
+        "dashboard_now_playing_requires_player": {
+            "message": "Le tableau de bord {dashboard} n\u00e9cessite un lecteur, valeur attendue : {expected}."
+        },
+        "dashboard_player_not_available": {
+            "message": "Le lecteur {player_id} est inconnu ou n'est pas expos\u00e9 \u00e0 Home Assistant."
+        },
+        "dashboard_type_not_supported": {
+            "message": "L'\u00e9cran {display} ne prend pas en charge le tableau de bord {dashboard}, valeurs attendues : {valid_ids}."
+        },
+        "dashboard_unknown_type": {
+            "message": "Le tableau de bord {dashboard} est inconnu, valeurs attendues : {valid_ids}."
+        },
+        "tts_entity_not_available": {
+            "message": "L'entit\u00e9 de synth\u00e8se vocale {entity_id} n'est pas disponible."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "V\u00e9rifie si des mises \u00e0 jour sont disponibles pour le serveur Music Assistant ou l'int\u00e9gration.",
+            "title": "Le serveur Music Assistant n'est pas \u00e0 la bonne version"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "Album",
+                "compilation": "Compilation",
+                "ep": "EP",
+                "single": "Single",
+                "unknown": "Inconnu"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "Ajouter \u00e0 la file d'attente",
+                "next": "Lire ensuite",
+                "play": "Lire",
+                "replace": "Lire maintenant et vider la file d'attente",
+                "replace_next": "Lire ensuite et vider la file d'attente"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "Album",
+                "artist": "Artiste",
+                "audiobook": "Livre audio",
+                "folder": "Dossier",
+                "playlist": "Liste de lecture",
+                "podcast": "Podcast",
+                "radio": "Radio",
+                "track": "Piste"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "Nom de l'artiste",
+                "artist_name_desc": "Nom de l'artiste (d\u00e9cr.)",
+                "last_played": "Derni\u00e8re lecture",
+                "last_played_desc": "Derni\u00e8re lecture (d\u00e9cr.)",
+                "name": "Nom",
+                "name_desc": "Nom (d\u00e9cr.)",
+                "play_count": "Nombre de lectures",
+                "play_count_desc": "Nombre de lectures (d\u00e9cr.)",
+                "position": "Position",
+                "position_desc": "Position (d\u00e9cr.)",
+                "random": "Al\u00e9atoire",
+                "random_play_count": "Al\u00e9atoire + moins \u00e9cout\u00e9es",
+                "sort_name": "Nom de tri",
+                "sort_name_desc": "Nom de tri (d\u00e9cr.)",
+                "timestamp_added": "Date d'ajout",
+                "timestamp_added_desc": "Date d'ajout (d\u00e9cr.)",
+                "year": "Ann\u00e9e",
+                "year_desc": "Ann\u00e9e (d\u00e9cr.)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "R\u00e9cup\u00e8re des \u00e9l\u00e9ments d'une biblioth\u00e8que Music Assistant.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Renvoyer uniquement les artistes d'album lors de la liste des \u00e9l\u00e9ments de la biblioth\u00e8que d'artistes.",
+                    "name": "Activer le filtre des artistes d'album (uniquement pour la biblioth\u00e8que d'artistes)"
+                },
+                "album_type": {
+                    "description": "Filtrer les albums par type.",
+                    "name": "Filtre de type d'album (biblioth\u00e8que d'albums uniquement)"
+                },
+                "config_entry_id": {
+                    "description": "S\u00e9lectionnez l'instance de Music Assistant sur laquelle effectuer la recherche.",
+                    "name": "Instance de Music Assistant"
+                },
+                "limit": {
+                    "description": "Nombre maximum d'\u00e9l\u00e9ments \u00e0 renvoyer.",
+                    "name": "Limite"
+                },
+                "media_type": {
+                    "description": "Le type de m\u00e9dia pour lequel des informations d\u00e9taill\u00e9es doivent \u00eatre demand\u00e9es.",
+                    "name": "Type de m\u00e9dia"
+                },
+                "offset": {
+                    "description": "D\u00e9calage \u00e0 partir duquel commencer la liste.",
+                    "name": "D\u00e9calage"
+                },
+                "order_by": {
+                    "description": "Trier la liste en fonction de ce champ.",
+                    "name": "Trier par"
+                },
+                "search": {
+                    "description": "Texte de recherche optionnel pour chercher dans cette biblioth\u00e8que.",
+                    "name": "Recherche"
+                },
+                "username": {
+                    "description": "Nom d'utilisateur Music Assistant utilis\u00e9 pour cette requ\u00eate. Fournir le nom d'utilisateur permet de respecter les filtres de fournisseurs configur\u00e9s par l'utilisateur.",
+                    "name": "Nom d'utilisateur"
+                }
+            },
+            "name": "Obtenir les \u00e9l\u00e9ments d'une biblioth\u00e8que",
+            "sections": {
+                "pagination": {
+                    "name": "Pagination"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "R\u00e9cup\u00e8re les d\u00e9tails de la file d'attente actuellement active d'un lecteur Music Assistant.",
+            "name": "Obtenir les d\u00e9tails de la file d'attente du lecteur"
+        },
+        "play_announcement": {
+            "description": "Lit une annonce sur un lecteur Music Assistant avec des options de contr\u00f4le plus pr\u00e9cises.",
+            "fields": {
+                "announce_volume": {
+                    "description": "Utiliser un niveau de volume forc\u00e9 pour l'annonce. Omettre pour utiliser la valeur par d\u00e9faut du lecteur.",
+                    "name": "Volume d'annonce"
+                },
+                "message": {
+                    "description": "Texte \u00e0 annoncer, prononc\u00e9 par l'entit\u00e9 de synth\u00e8se vocale choisie. Indiquez soit un message, soit une URL.",
+                    "name": "Message"
+                },
+                "pre_announce_url": {
+                    "description": "URL vers le son de la pr\u00e9-annonce.",
+                    "name": "URL de pr\u00e9-annonce"
+                },
+                "tts_entity_id": {
+                    "description": "Entit\u00e9 de synth\u00e8se vocale qui prononce le message. Obligatoire quand un message est indiqu\u00e9.",
+                    "name": "Entit\u00e9 de synth\u00e8se vocale"
+                },
+                "url": {
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Utiliser le son de pr\u00e9-annonce pour l'annonce. Omettre pour utiliser le son par d\u00e9faut du lecteur.",
+                    "name": "Utiliser la pr\u00e9-annonce"
+                }
+            },
+            "name": "Lire une annonce"
+        },
+        "play_media": {
+            "description": "Lit des fichiers multim\u00e9dias sur un lecteur Music Assistant avec des options de contr\u00f4le plus pr\u00e9cises.",
+            "fields": {
+                "album": {
+                    "description": "Lorsque vous sp\u00e9cifiez une piste par son nom dans le champ ID m\u00e9dia, vous pouvez \u00e9ventuellement restreindre les r\u00e9sultats par ce nom d'album.",
+                    "name": "Nom de l'album"
+                },
+                "artist": {
+                    "description": "Lorsque vous sp\u00e9cifiez une piste ou un album par son nom dans le champ ID m\u00e9dia, vous pouvez \u00e9ventuellement restreindre les r\u00e9sultats par ce nom d'artiste.",
+                    "name": "Nom de l'artiste"
+                },
+                "enqueue": {
+                    "description": "Si le contenu doit \u00eatre lu maintenant ou ajout\u00e9 \u00e0 la file d'attente.",
+                    "name": "Mettre en file d'attente"
+                },
+                "media_id": {
+                    "description": "URI ou nom de l'\u00e9l\u00e9ment que vous souhaitez lire. Sp\u00e9cifiez une liste si vous souhaitez lire/mettre en file d'attente plusieurs \u00e9l\u00e9ments.",
+                    "name": "ID du m\u00e9dia"
+                },
+                "media_type": {
+                    "description": "Le type de contenu \u00e0 lire. Par exemple, l'artiste, l'album, le morceau ou la liste de lecture. Sera d\u00e9termin\u00e9 automatiquement s'il est omis.",
+                    "name": "Type de m\u00e9dia"
+                },
+                "radio_mode": {
+                    "description": "Activez le mode radio pour g\u00e9n\u00e9rer automatiquement une liste de lecture en fonction de la s\u00e9lection.",
+                    "name": "Activer le mode radio"
+                },
+                "username": {
+                    "name": "Nom d'utilisateur"
+                }
+            },
+            "name": "Lire des m\u00e9dias"
+        },
+        "search": {
+            "description": "Effectue une recherche globale sur la biblioth\u00e8que Music Assistant et tous les fournisseurs.",
+            "fields": {
+                "album": {
+                    "description": "Lorsque vous sp\u00e9cifiez un nom de piste dans le champ nom, vous pouvez \u00e9ventuellement restreindre les r\u00e9sultats par ce nom d'album.",
+                    "name": "Nom de l'album"
+                },
+                "artist": {
+                    "description": "Lorsque vous sp\u00e9cifiez un nom de piste ou d'album dans le champ nom, vous pouvez \u00e9ventuellement restreindre les r\u00e9sultats par ce nom d'artiste.",
+                    "name": "Nom de l'artiste"
+                },
+                "config_entry_id": {
+                    "description": "S\u00e9lectionnez l'instance de Music Assistant sur laquelle effectuer la recherche.",
+                    "name": "Instance de Music Assistant"
+                },
+                "library_only": {
+                    "description": "Inclure uniquement les r\u00e9sultats qui se trouvent dans la biblioth\u00e8que.",
+                    "name": "Uniquement les \u00e9l\u00e9ments de la biblioth\u00e8que"
+                },
+                "limit": {
+                    "description": "Nombre maximum d'\u00e9l\u00e9ments \u00e0 retourner (par type de m\u00e9dia).",
+                    "name": "Limite"
+                },
+                "media_type": {
+                    "description": "Le type de contenu \u00e0 rechercher (artiste, album, piste, radio ou liste de lecture). Tous les types si omis.",
+                    "name": "Type(s) de m\u00e9dia"
+                },
+                "name": {
+                    "description": "Le nom/titre \u00e0 rechercher.",
+                    "name": "Nom de recherche"
+                },
+                "username": {
+                    "name": "Nom d'utilisateur"
+                }
+            },
+            "name": "Rechercher dans Music Assistant",
+            "sections": {
+                "search_options": {
+                    "name": "Options de recherche"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "Transf\u00e8re la file d'attente d'un lecteur \u00e0 un autre lecteur.",
+            "fields": {
+                "auto_play": {
+                    "description": "Lance la lecture de la file d'attente sur le lecteur cible. Omettre pour utiliser le comportement par d\u00e9faut.",
+                    "name": "Lecture automatique"
+                },
+                "source_player": {
+                    "description": "Le lecteur multim\u00e9dia source qui contient la file d'attente que vous souhaitez transf\u00e9rer. S'il est omis, le premier lecteur en cours de lecture sera utilis\u00e9.",
+                    "name": "Lecteur multim\u00e9dia source"
+                }
+            },
+            "name": "Transf\u00e9rer une file d'attente"
+        }
+    }
+}

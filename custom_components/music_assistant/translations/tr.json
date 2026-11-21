@@ -1,0 +1,552 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f",
+            "already_in_progress": "Bu zaten yap\u0131land\u0131r\u0131l\u0131yor. Tekrar ba\u015flamadan \u00f6nce mevcut yap\u0131land\u0131rmay\u0131 tamamlay\u0131n.",
+            "app_get_discovery_info_failed": "Music Assistant uygulamas\u0131n\u0131n ke\u015fif bilgilerini al\u0131namad\u0131.",
+            "app_info_failed": "Music Assistant uygulamas\u0131n\u0131n bilgileri al\u0131namad\u0131.",
+            "app_install_failed": "Music Assistant uygulamas\u0131 y\u00fcklenemedi.",
+            "app_start_failed": "Music Assistant uygulamas\u0131 ba\u015flat\u0131lamad\u0131.",
+            "auth_error": "Kimlik do\u011frulama hatas\u0131, l\u00fctfen tekrar deneyin",
+            "auth_failed": "Kimlik do\u011frulama ba\u015far\u0131s\u0131z oldu, l\u00fctfen tekrar deneyin",
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "invalid_server_version": "M\u00fczik Asistan\u0131 sunucusu do\u011fru s\u00fcr\u00fcm de\u011fil",
+            "no_url_available": "Kullan\u0131labilir URL yok. Bu hata hakk\u0131nda bilgi i\u00e7in [yard\u0131m b\u00f6l\u00fcm\u00fcne bak\u0131n]({docs_url})",
+            "unknown": "Beklenmeyen hata"
+        },
+        "error": {
+            "auth_failed": "Kimlik do\u011frulama ba\u015far\u0131s\u0131z oldu, l\u00fctfen tekrar deneyin",
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "invalid_server_version": "M\u00fczik Asistan\u0131 sunucusu do\u011fru s\u00fcr\u00fcm de\u011fil",
+            "unknown": "Beklenmeyen hata"
+        },
+        "progress": {
+            "install_app": "Music Assistant uygulamas\u0131n\u0131n y\u00fcklemesi tamamlanana kadar l\u00fctfen bekleyin. Bu i\u015flem birka\u00e7 dakika s\u00fcrebilir.",
+            "start_app": "Music Assistant uygulamas\u0131 a\u00e7\u0131l\u0131rken l\u00fctfen bekleyin. Bu i\u015flem birka\u00e7 saniye s\u00fcrebilir."
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Uzun \u00f6m\u00fcrl\u00fc eri\u015fim jetonu"
+                },
+                "data_description": {
+                    "token": "M\u00fczik Asistan\u0131 sunucu ayarlar\u0131n\u0131zda uzun \u00f6m\u00fcrl\u00fc bir eri\u015fim belirteci olu\u015fturun ve buraya yap\u0131\u015ft\u0131r\u0131n"
+                },
+                "title": "Uzun \u00f6m\u00fcrl\u00fc eri\u015fim belirtecini girin"
+            },
+            "discovery_confirm": {
+                "description": "Music Assistant sunucusunu ` {url} ` Home Assistant'a eklemek ister misiniz?",
+                "title": "M\u00fczik Asistan\u0131 sunucusu ke\u015ffedildi"
+            },
+            "hassio_confirm": {
+                "description": "M\u00fczik Asistan\u0131 sunucusunu Home Assistant'a eklemek ister misiniz?",
+                "title": "M\u00fczik Asistan\u0131 uygulamas\u0131n\u0131 ke\u015ffetti"
+            },
+            "install_app": {
+                "title": "Uygulaman\u0131n y\u00fcklenmesi ba\u015flad\u0131"
+            },
+            "manual": {
+                "data_description": {
+                    "url": "Music Assistant sunucusunun URL'si"
+                }
+            },
+            "on_supervisor": {
+                "data": {
+                    "use_app": "Resmi Music Assistant uygulamas\u0131n\u0131 kullan\u0131n"
+                },
+                "data_description": {
+                    "use_app": "Home Assistant, gerekirse uygulamay\u0131 sizin ad\u0131n\u0131za y\u00fckler ve ba\u015flat\u0131r."
+                },
+                "description": "Resmi Music Assistant uygulamas\u0131n\u0131 kullanmak istiyor musunuz?\n\nMusic Assistant'\u0131 halihaz\u0131rda ba\u015fka bir uygulamada, \u00f6zel bir kapsay\u0131c\u0131da, yerel olarak vb. \u00e7al\u0131\u015ft\u0131r\u0131yorsan\u0131z, bu se\u00e7ene\u011fi i\u015faretlemeyin.",
+                "title": "Ba\u011flant\u0131 y\u00f6ntemini se\u00e7in"
+            },
+            "onboarding": {
+                "description": "Music Assistant uygulamas\u0131n\u0131 a\u00e7\u0131n ve ilk kurulumunu tamamlay\u0131n. Kurulum tamamland\u0131\u011f\u0131nda Home Assistant otomatik olarak devam eder.",
+                "title": "Music Assistant kurulumunu tamamlay\u0131n"
+            },
+            "reauth_confirm": {
+                "description": "Music Assistant sunucusu i\u00e7in kimlik do\u011frulama belirteci `{url}` art\u0131k ge\u00e7erli de\u011fil. Entegrasyonu kullanmaya devam etmek i\u00e7in l\u00fctfen yeniden kimlik do\u011frulamas\u0131 yap\u0131n.",
+                "title": "Yeniden kimlik do\u011frulamas\u0131 gerekli"
+            },
+            "start_app": {
+                "title": "Uygulamay\u0131 ba\u015flat\u0131yor"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "En sevdi\u011finiz g\u00fcncel \u015fark\u0131"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "11 kanall\u0131 stereo",
+                            "2ch_stereo": "2 kanall\u0131 stereo",
+                            "5ch_stereo": "5 kanall\u0131 stereo",
+                            "7ch_stereo": "7 kanall\u0131 stereo",
+                            "9ch_stereo": "9 kanall\u0131 stereo",
+                            "action_game": "Aksiyon oyunu",
+                            "adventure": "Macera",
+                            "all_ch_stereo": "T\u00fcm kanallar stereo",
+                            "amsterdam": "Amsterdam'daki salon",
+                            "arena": "Arena",
+                            "bass_booster": "Bas g\u00fc\u00e7lendirici",
+                            "bottom_line": "Alt Sat\u0131r",
+                            "cellar_club": "Mahzen kul\u00fcb\u00fc",
+                            "chamber": "B\u00f6lme",
+                            "concert": "Canl\u0131 konser",
+                            "disco": "Disko",
+                            "drama": "Drama",
+                            "enhanced": "Geli\u015ftirilmi\u015f",
+                            "frankfurt": "Frankfurt'taki Salon",
+                            "freiburg": "Freiburg'daki Kilise",
+                            "game": "Oyun",
+                            "jazz_club": "Caz kul\u00fcb\u00fc",
+                            "mono_movie": "Mono filmi",
+                            "movie": "Film",
+                            "munich": "M\u00fcnih'teki Salon",
+                            "munich_a": "M\u00fcnih A Salonu",
+                            "munich_b": "M\u00fcnih'teki Salon B",
+                            "music": "M\u00fczik",
+                            "music_video": "M\u00fczik videosu",
+                            "my_surround": "\u00c7evrem",
+                            "off": "Kapal\u0131",
+                            "pavilion": "Pavyon",
+                            "recital_opera": "Resital/opera",
+                            "roleplaying_game": "Rol yapma oyunu",
+                            "roxy_theatre": "Roxy Tiyatrosu",
+                            "royaumont": "Royaumont'taki Kilise",
+                            "sci-fi": "Bilim kurgu",
+                            "spectacle": "G\u00f6steri",
+                            "sports": "Spor",
+                            "standard": "Standart",
+                            "stereo": "Stereo",
+                            "straight": "D\u00fcz",
+                            "stuttgart": "Stuttgart'taki Salon",
+                            "surr_decoder": "Surround kod \u00e7\u00f6z\u00fcc\u00fc",
+                            "talk_show": "Talk show",
+                            "target": "Hedef",
+                            "tokyo": "Tokyo'daki Kilise",
+                            "tv_program": "TV program\u0131",
+                            "usa_a": "ABD'deki Hall A",
+                            "usa_b": "ABD'deki Hall B",
+                            "vienna": "Viyana'daki Salon",
+                            "village_gate": "K\u00f6y Kap\u0131s\u0131",
+                            "village_vanguard": "K\u00f6y\u00fcn \u00d6nc\u00fcs\u00fc",
+                            "warehouse_loft": "Depo \u00e7at\u0131 kat\u0131"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "Bas"
+            },
+            "dialogue_level": {
+                "name": "Diyalog d\u00fczeyi"
+            },
+            "dialogue_lift": {
+                "name": "Diyalog kald\u0131rma"
+            },
+            "dts_dialogue_control": {
+                "name": "DTS diyalog kontrol\u00fc"
+            },
+            "equalizer_high": {
+                "name": "Ekolayz\u0131r y\u00fcksek"
+            },
+            "equalizer_low": {
+                "name": "Ekolayz\u0131r d\u00fc\u015f\u00fck"
+            },
+            "equalizer_mid": {
+                "name": "Ekolayzer orta"
+            },
+            "subwoofer_volume": {
+                "name": "Subwoofer ses seviyesi"
+            },
+            "treble": {
+                "name": "Tiz"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "Dimmer",
+                "state": {
+                    "auto": "Otomatik"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Ekolayz\u0131r modu",
+                "state": {
+                    "auto": "Otomatik",
+                    "bypass": "Atlatma",
+                    "manual": "Manuel"
+                }
+            },
+            "link_audio_delay": {
+                "name": "Ba\u011flant\u0131 ses gecikmesi",
+                "state": {
+                    "audio_sync": "Ses senkronizasyonu",
+                    "audio_sync_off": "Ses senkronizasyonu kapal\u0131",
+                    "audio_sync_on": "Ses senkronizasyonu a\u00e7\u0131k",
+                    "balanced": "Dengeli",
+                    "lip_sync": "Dudak senkronizasyonu"
+                }
+            },
+            "link_audio_quality": {
+                "name": "Ses kalitesi ba\u011flant\u0131s\u0131",
+                "state": {
+                    "compressed": "S\u0131k\u0131\u015ft\u0131r\u0131lm\u0131\u015f",
+                    "uncompressed": "S\u0131k\u0131\u015ft\u0131r\u0131lmam\u0131\u015f"
+                }
+            },
+            "link_control": {
+                "name": "Ba\u011flant\u0131 kontrol\u00fc",
+                "state": {
+                    "speed": "H\u0131z",
+                    "stability": "Stabilite",
+                    "standard": "Standart"
+                }
+            },
+            "sleep": {
+                "name": "Uyku zamanlay\u0131c\u0131s\u0131",
+                "state": {
+                    "0": "Kapal\u0131",
+                    "120": "120 dakika",
+                    "30": "30 dakika",
+                    "60": "60 dakika",
+                    "90": "90 dakika"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Surround dekoder tipi",
+                "state": {
+                    "auto": "Otomatik",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x Oyun",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x Film",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x M\u00fczik",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 Sinema",
+                    "dts_neo6_music": "DTS Neo:6 M\u00fczik",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "De\u011fi\u015ftir"
+                }
+            },
+            "tone_control_mode": {
+                "name": "Ses kontrol modu",
+                "state": {
+                    "auto": "Otomatik",
+                    "bypass": "Atlatma",
+                    "manual": "Manuel"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "Uyarlanabilir DRC"
+            },
+            "bass_extension": {
+                "name": "Bas uzant\u0131s\u0131"
+            },
+            "clear_voice": {
+                "name": "Temiz ses"
+            },
+            "enhancer": {
+                "name": "G\u00fc\u00e7lendirici"
+            },
+            "extra_bass": {
+                "name": "Ekstra bas"
+            },
+            "party_mode": {
+                "name": "Parti modu"
+            },
+            "pure_direct": {
+                "name": "Saf do\u011frudan"
+            },
+            "speaker_a": {
+                "name": "Hoparl\u00f6r A"
+            },
+            "speaker_b": {
+                "name": "Hoparl\u00f6r B"
+            },
+            "surround_3d": {
+                "name": "\u00c7evreleyen 3D"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "A\u011f ad\u0131"
+            }
+        }
+    },
+    "exceptions": {
+        "dashboard_display_not_available": {
+            "message": "{display} adl\u0131 ekran mevcut de\u011fil."
+        },
+        "dashboard_invalid_media_type": {
+            "message": "G\u00f6sterge paneli yaln\u0131zca {expected} medya i\u00e7erik t\u00fcr\u00fcn\u00fc kabul ediyor, ancak {media_type} geldi."
+        },
+        "dashboard_media_not_found": {
+            "message": "{media_content_id} adl\u0131 medya dosyas\u0131 bulunamad\u0131."
+        },
+        "dashboard_now_playing_requires_player": {
+            "message": "{dashboard} adresindeki g\u00f6sterge paneli i\u00e7in bir oynat\u0131c\u0131 gereklidir; {expected} adresinden indirilebilir."
+        },
+        "dashboard_player_not_available": {
+            "message": "{player_id} adl\u0131 oynat\u0131c\u0131 bilinmiyor veya Home Assistant\u2019a eklenmemi\u015f."
+        },
+        "dashboard_type_not_supported": {
+            "message": "{display} adresindeki ekran, {dashboard} adresindeki g\u00f6sterge panelini desteklemiyor; {valid_ids} adreslerinden birinin desteklenmesi bekleniyordu."
+        },
+        "dashboard_unknown_type": {
+            "message": "{dashboard} adresindeki g\u00f6sterge paneli bilinmiyor; \u015funlardan birinin olmas\u0131 bekleniyor: {valid_ids}."
+        },
+        "invalid_username": {
+            "message": "Kullan\u0131c\u0131 ad\u0131 {username} M\u00fczik Asistan\u0131 sunucusunda mevcut de\u011fil."
+        },
+        "tts_entity_not_available": {
+            "message": "Metinden sese d\u00f6n\u00fc\u015ft\u00fcrme birimi {entity_id} Mevcut de\u011fil."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "M\u00fczik Asistan\u0131 sunucusu ve/veya entegrasyonu i\u00e7in g\u00fcncellemelerin olup olmad\u0131\u011f\u0131n\u0131 kontrol edin.",
+            "title": "M\u00fczik Asistan\u0131 sunucusu do\u011fru s\u00fcr\u00fcm de\u011fil"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "Alb\u00fcm",
+                "compilation": "Derleme",
+                "ep": "EP",
+                "single": "Tek",
+                "unknown": "Bilinmeyen"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "S\u0131raya ekle",
+                "next": "Sonraki oynat",
+                "play": "Oynat",
+                "replace": "\u015eimdi oyna ve kuyru\u011fu temizle",
+                "replace_next": "Sonrakini oyna ve s\u0131ray\u0131 temizle"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "Alb\u00fcm",
+                "artist": "Sanat\u00e7\u0131",
+                "audiobook": "Sesli kitap",
+                "folder": "Klas\u00f6r",
+                "playlist": "\u00c7alma listesi",
+                "podcast": "Podcast",
+                "radio": "Radyo",
+                "track": "Izlemek"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "Sanat\u00e7\u0131 ad\u0131",
+                "artist_name_desc": "Sanat\u00e7\u0131 ad\u0131 (a\u00e7\u0131klama)",
+                "last_played": "Son oynanan",
+                "last_played_desc": "Son oynanan (azalan)",
+                "name": "\u0130sim",
+                "name_desc": "\u0130sim (azalan)",
+                "play_count": "Oynatma say\u0131s\u0131",
+                "play_count_desc": "Oynatma say\u0131s\u0131 (azalan)",
+                "position": "Pozisyon",
+                "position_desc": "Pozisyon (azalan)",
+                "random": "Rastgele",
+                "random_play_count": "Rastgele + en az oynanan",
+                "sort_name": "S\u0131ralama ad\u0131",
+                "sort_name_desc": "S\u0131ralama ad\u0131 (azalan)",
+                "timestamp_added": "Eklendi",
+                "timestamp_added_desc": "Eklendi (azalan)",
+                "year": "Y\u0131l",
+                "year_desc": "Y\u0131l (azalan)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "M\u00fczik Asistan\u0131 k\u00fct\u00fcphanesinden \u00f6\u011feleri al\u0131r.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Sanat\u00e7\u0131 k\u00fct\u00fcphane \u00f6\u011felerini listelerken yaln\u0131zca alb\u00fcm sanat\u00e7\u0131lar\u0131n\u0131 d\u00f6nd\u00fcr.",
+                    "name": "Alb\u00fcm sanat\u00e7\u0131lar\u0131 filtresini etkinle\u015ftir (sadece sanat\u00e7\u0131 kitapl\u0131\u011f\u0131 i\u00e7in)"
+                },
+                "album_type": {
+                    "description": "Alb\u00fcmleri t\u00fcre g\u00f6re filtrele.",
+                    "name": "Alb\u00fcm t\u00fcr\u00fc filtresi (sadece alb\u00fcm k\u00fct\u00fcphanesi)"
+                },
+                "config_entry_id": {
+                    "description": "Araman\u0131n ger\u00e7ekle\u015ftirilece\u011fi M\u00fczik Asistan\u0131 \u00f6rne\u011fini se\u00e7in.",
+                    "name": "M\u00fczik Asistan\u0131 \u00f6rne\u011fi"
+                },
+                "limit": {
+                    "description": "\u0130ade edilecek maksimum \u00fcr\u00fcn say\u0131s\u0131.",
+                    "name": "Limit"
+                },
+                "media_type": {
+                    "description": "Ayr\u0131nt\u0131lar\u0131n\u0131n talep edilece\u011fi medya t\u00fcr\u00fc.",
+                    "name": "Medya t\u00fcr\u00fc"
+                },
+                "offset": {
+                    "description": "Listeyi nereden ba\u015flataca\u011f\u0131n\u0131za dair ofset.",
+                    "name": "Telafi"
+                },
+                "order_by": {
+                    "description": "Listeyi bu alana g\u00f6re s\u0131rala.",
+                    "name": "S\u0131ralama \u00f6l\u00e7\u00fct\u00fc"
+                },
+                "search": {
+                    "description": "Bu k\u00fct\u00fcphanede arama yapmak i\u00e7in iste\u011fe ba\u011fl\u0131 arama dizesi.",
+                    "name": "Ara"
+                },
+                "username": {
+                    "description": "Bu istek i\u00e7in kullan\u0131lan Music Assistant kullan\u0131c\u0131 ad\u0131. Kullan\u0131c\u0131 ad\u0131n\u0131n belirtilmesi durumunda, kullan\u0131c\u0131n\u0131n yap\u0131land\u0131rd\u0131\u011f\u0131 sa\u011flay\u0131c\u0131 filtrelerine uyulacakt\u0131r.",
+                    "name": "Kullan\u0131c\u0131 Ad\u0131"
+                }
+            },
+            "name": "K\u00fct\u00fcphane \u00f6\u011felerini al",
+            "sections": {
+                "pagination": {
+                    "name": "Sayfa numaraland\u0131rma"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "Bir M\u00fczik Asistan\u0131 oynat\u0131c\u0131s\u0131n\u0131n \u015fu anda etkin olan kuyru\u011funun ayr\u0131nt\u0131lar\u0131n\u0131 al\u0131r.",
+            "name": "Oyuncu s\u0131ras\u0131 detaylar\u0131n\u0131 al\u0131n"
+        },
+        "play_announcement": {
+            "description": "Daha ayr\u0131nt\u0131l\u0131 kontrol se\u00e7enekleriyle bir M\u00fczik Asistan\u0131 oynat\u0131c\u0131s\u0131nda bir duyuru oynat\u0131r.",
+            "fields": {
+                "announce_volume": {
+                    "description": "Duyuru i\u00e7in zorunlu bir ses seviyesi kullan\u0131n. Oynat\u0131c\u0131 varsay\u0131lan\u0131n\u0131 kullanmay\u0131 atlay\u0131n.",
+                    "name": "Ses seviyesini duyurun"
+                },
+                "message": {
+                    "description": "Se\u00e7ilen metin okuma yaz\u0131l\u0131m\u0131 taraf\u0131ndan seslendirilecek duyuru metni. Bir mesaj veya bir URL sa\u011flay\u0131n.",
+                    "name": "Mesaj"
+                },
+                "pre_announce_url": {
+                    "description": "Duyuru \u00f6ncesi ses i\u00e7in URL.",
+                    "name": "\u00d6n duyuru URL'si"
+                },
+                "tts_entity_id": {
+                    "description": "Mesaj\u0131 seslendiren metinden sese d\u00f6n\u00fc\u015ft\u00fcrme bile\u015feni. Mesaj verildi\u011finde gereklidir.",
+                    "name": "Metinden sese d\u00f6n\u00fc\u015ft\u00fcrme varl\u0131\u011f\u0131"
+                },
+                "url": {
+                    "description": "Bildirim sesinin URL'si. L\u00fctfen bir mesaj veya bir URL girin.",
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Duyuru i\u00e7in \u00f6n duyuru sesini kullan. Oynat\u0131c\u0131n\u0131n varsay\u0131lan\u0131n\u0131 kullanmay\u0131 atla.",
+                    "name": "\u00d6n duyuruyu kullan\u0131n"
+                }
+            },
+            "name": "Oyun duyurusu"
+        },
+        "play_media": {
+            "description": "Daha ayr\u0131nt\u0131l\u0131 kontrol se\u00e7enekleriyle M\u00fczik Asistan\u0131 oynat\u0131c\u0131s\u0131nda medya oynat\u0131r.",
+            "fields": {
+                "album": {
+                    "description": "Medya Kimli\u011fi alan\u0131nda bir par\u00e7ay\u0131 ad\u0131yla belirtti\u011finizde, iste\u011fe ba\u011fl\u0131 olarak sonu\u00e7lar\u0131 bu alb\u00fcm ad\u0131na g\u00f6re s\u0131n\u0131rlayabilirsiniz.",
+                    "name": "Alb\u00fcm ad\u0131"
+                },
+                "artist": {
+                    "description": "Medya Kimli\u011fi alan\u0131nda bir par\u00e7ay\u0131 veya alb\u00fcm\u00fc ad\u0131yla belirtti\u011finizde, iste\u011fe ba\u011fl\u0131 olarak sonu\u00e7lar\u0131 bu sanat\u00e7\u0131 ad\u0131na g\u00f6re s\u0131n\u0131rlayabilirsiniz.",
+                    "name": "Sanat\u00e7\u0131 ad\u0131"
+                },
+                "enqueue": {
+                    "description": "\u0130\u00e7eri\u011fin \u015fimdi oynat\u0131lmas\u0131 m\u0131 yoksa s\u0131raya eklenmesi mi gerekti\u011fi.",
+                    "name": "S\u0131raya girmek"
+                },
+                "media_id": {
+                    "description": "\u00c7almak istedi\u011finiz \u00f6\u011fenin URI'si veya ad\u0131. Birden fazla \u00f6\u011feyi \u00e7almak/kuyru\u011fa almak istiyorsan\u0131z bir liste belirtin.",
+                    "name": "Medya Kimlik(leri)"
+                },
+                "media_type": {
+                    "description": "Oynat\u0131lacak i\u00e7eri\u011fin t\u00fcr\u00fc. Sanat\u00e7\u0131, alb\u00fcm, par\u00e7a veya \u00e7alma listesi gibi. Atlan\u0131rsa otomatik olarak belirlenecektir.",
+                    "name": "Medya t\u00fcr\u00fc"
+                },
+                "radio_mode": {
+                    "description": "Se\u00e7ime g\u00f6re bir \u00e7alma listesinin otomatik olarak olu\u015fturulmas\u0131 i\u00e7in radyo modunu etkinle\u015ftirin.",
+                    "name": "Radyo modunu etkinle\u015ftir"
+                },
+                "start_item": {
+                    "description": "\u0130lk \u00f6\u011fe yerine oynatman\u0131n ba\u015flayaca\u011f\u0131 \u00f6\u011fe. Bir podcast\u2019i en yeni b\u00f6l\u00fcm\u00fcnden oynatmak i\u00e7in `latest` se\u00e7ene\u011fini kullan\u0131n ya da ba\u015flang\u0131\u00e7 noktas\u0131 olarak par\u00e7a veya b\u00f6l\u00fcm\u00fcn URI\u2019sini, kimli\u011fini veya ad\u0131n\u0131n bir k\u0131sm\u0131n\u0131 (en az 3 karakter) belirtin.",
+                    "name": "Ba\u015flang\u0131\u00e7 \u200b\u200b\u00f6\u011fesi"
+                },
+                "username": {
+                    "name": "Kullan\u0131c\u0131 Ad\u0131"
+                }
+            },
+            "name": "Medyay\u0131 oynat"
+        },
+        "search": {
+            "description": "M\u00fczik Asistan\u0131 k\u00fct\u00fcphanesi ve t\u00fcm sa\u011flay\u0131c\u0131lar \u00fczerinde genel bir arama ger\u00e7ekle\u015ftirir.",
+            "fields": {
+                "album": {
+                    "description": "Ad alan\u0131na bir par\u00e7a ad\u0131 belirtti\u011finizde, iste\u011fe ba\u011fl\u0131 olarak sonu\u00e7lar\u0131 bu alb\u00fcm ad\u0131na g\u00f6re s\u0131n\u0131rlayabilirsiniz.",
+                    "name": "Alb\u00fcm ad\u0131"
+                },
+                "artist": {
+                    "description": "Ad alan\u0131na bir par\u00e7a veya alb\u00fcm ad\u0131 belirtti\u011finizde, iste\u011fe ba\u011fl\u0131 olarak sonu\u00e7lar\u0131 bu sanat\u00e7\u0131 ad\u0131na g\u00f6re s\u0131n\u0131rlayabilirsiniz.",
+                    "name": "Sanat\u00e7\u0131 ad\u0131"
+                },
+                "config_entry_id": {
+                    "description": "Araman\u0131n ger\u00e7ekle\u015ftirilece\u011fi M\u00fczik Asistan\u0131 \u00f6rne\u011fini se\u00e7in.",
+                    "name": "M\u00fczik Asistan\u0131 \u00f6rne\u011fi"
+                },
+                "library_only": {
+                    "description": "Yaln\u0131zca k\u00fct\u00fcphanede bulunan sonu\u00e7lar\u0131 ekleyin.",
+                    "name": "Sadece k\u00fct\u00fcphane \u00f6\u011feleri"
+                },
+                "limit": {
+                    "description": "D\u00f6nd\u00fcr\u00fclecek \u00f6\u011felerin maksimum say\u0131s\u0131 (medya t\u00fcr\u00fc ba\u015f\u0131na).",
+                    "name": "Limit"
+                },
+                "media_type": {
+                    "description": "Aranacak i\u00e7eri\u011fin t\u00fcr\u00fc. Sanat\u00e7\u0131, alb\u00fcm, par\u00e7a, radyo veya \u00e7alma listesi gibi. T\u00fcm t\u00fcrler atlan\u0131rsa.",
+                    "name": "Medya t\u00fcr\u00fc(leri)"
+                },
+                "name": {
+                    "description": "Aranacak isim/ba\u015fl\u0131k.",
+                    "name": "Ad\u0131n\u0131 ara"
+                },
+                "username": {
+                    "name": "Kullan\u0131c\u0131 Ad\u0131"
+                }
+            },
+            "name": "M\u00fczik Asistan\u0131'n\u0131 aray\u0131n",
+            "sections": {
+                "search_options": {
+                    "name": "Ayarlarda Ara"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "Bir oyuncunun kuyru\u011funu ba\u015fka bir oyuncuya aktar\u0131r.",
+            "fields": {
+                "auto_play": {
+                    "description": "S\u0131ray\u0131 hedef oyuncuda oynatmaya ba\u015fla. Varsay\u0131lan davran\u0131\u015f\u0131 kullanmay\u0131 atla.",
+                    "name": "Otomatik oynat"
+                },
+                "source_player": {
+                    "description": "Aktarmak istedi\u011finiz s\u0131raya sahip kaynak medya oynat\u0131c\u0131s\u0131. Atland\u0131\u011f\u0131nda, ilk oynayan oynat\u0131c\u0131 kullan\u0131lacakt\u0131r.",
+                    "name": "Kaynak medya oynat\u0131c\u0131s\u0131"
+                }
+            },
+            "name": "Transfer kuyru\u011fu"
+        }
+    }
+}

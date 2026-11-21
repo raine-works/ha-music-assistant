@@ -1,0 +1,573 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Az eszk\u00f6z m\u00e1r konfigur\u00e1lva van",
+            "already_in_progress": "A konfigur\u00e1l\u00e1s m\u00e1r folyamatban van. Fejezze be a megl\u00e9v\u0151 konfigur\u00e1l\u00e1st, miel\u0151tt \u00fajrakezden\u00e9.",
+            "app_get_discovery_info_failed": "Nem siker\u00fclt lek\u00e9rni a Music Assistant alkalmaz\u00e1s felder\u00edt\u00e9si adatait.",
+            "app_info_failed": "Nem siker\u00fclt lek\u00e9rni a Music Assistant alkalmaz\u00e1s adatait.",
+            "app_install_failed": "Nem siker\u00fclt telep\u00edteni a Music Assistant alkalmaz\u00e1st.",
+            "app_start_failed": "Nem siker\u00fclt elind\u00edtani a Music Assistant alkalmaz\u00e1st.",
+            "auth_error": "Hiteles\u00edt\u00e9si hiba, pr\u00f3b\u00e1lja meg \u00fajra",
+            "auth_failed": "Hiteles\u00edt\u00e9s sikertelen, k\u00e9rj\u00fck pr\u00f3b\u00e1lja \u00fajra",
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+            "invalid_server_version": "A Music Assistant szerver nem megfelel\u0151 verzi\u00f3j\u00fa",
+            "no_url_available": "Nincs el\u00e9rhet\u0151 URL. A hib\u00e1val kapcsolatos inform\u00e1ci\u00f3k\u00e9rt n\u00e9zze meg a [s\u00fag\u00f3]({docs_url}) le\u00edr\u00e1s\u00e1t.",
+            "unique_id_mismatch": "A megadott URL egy m\u00e1sik Music Assistant szerverhez tartozik.",
+            "unknown": "V\u00e1ratlan hiba"
+        },
+        "error": {
+            "auth_failed": "Hiteles\u00edt\u00e9s sikertelen, k\u00e9rj\u00fck pr\u00f3b\u00e1lja \u00fajra",
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+            "invalid_server_version": "A Music Assistant szerver nem megfelel\u0151 verzi\u00f3j\u00fa",
+            "unknown": "V\u00e1ratlan hiba"
+        },
+        "progress": {
+            "install_app": "K\u00e9rj\u00fck, v\u00e1rjon, am\u00edg a Music Assistant alkalmaz\u00e1s telep\u00edt\u00e9se befejez\u0151dik. Ez t\u00f6bb percet is ig\u00e9nybe vehet.",
+            "start_app": "K\u00e9rj\u00fck, v\u00e1rjon, am\u00edg a Music Assistant alkalmaz\u00e1s elindul. Ez n\u00e9h\u00e1ny m\u00e1sodpercet ig\u00e9nybe vehet."
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Hossz\u00fa \u00e9lettartam\u00fa hozz\u00e1f\u00e9r\u00e9si token"
+                },
+                "data_description": {
+                    "token": "Hozzon l\u00e9tre egy hossz\u00fa \u00e9lettartam\u00fa hozz\u00e1f\u00e9r\u00e9si tokent a Music Assistant szerver be\u00e1ll\u00edt\u00e1saiban, \u00e9s illessze be ide"
+                },
+                "title": "Adja meg a hossz\u00fa \u00e9lettartam\u00fa hozz\u00e1f\u00e9r\u00e9si tokent"
+            },
+            "discovery_confirm": {
+                "description": "Szeretn\u00e9 hozz\u00e1adni a(z) {url} Music Assistant szervert a Home Assistanthoz?",
+                "title": "Felfedezett Music Assistant Server"
+            },
+            "hassio_confirm": {
+                "description": "Szeretn\u00e9 hozz\u00e1adni a Music Assistant szervert a Home Assistanthoz?",
+                "title": "Felfedezett Music Assistant alkalmaz\u00e1s"
+            },
+            "install_app": {
+                "title": "Az alkalmaz\u00e1s telep\u00edt\u00e9se elindult"
+            },
+            "manual": {
+                "data": {
+                    "url": "URL"
+                },
+                "data_description": {
+                    "url": "A Music Assistant szerver URL-je"
+                }
+            },
+            "on_supervisor": {
+                "data": {
+                    "use_app": "A hivatalos Music Assistant alkalmaz\u00e1s haszn\u00e1lata"
+                },
+                "data_description": {
+                    "use_app": "Ha sz\u00fcks\u00e9ges, a Home Assistant telep\u00edti \u00e9s elind\u00edtja az alkalmaz\u00e1st \u00d6n helyett."
+                },
+                "description": "Szeretn\u00e9 a hivatalos Music Assistant alkalmaz\u00e1st haszn\u00e1lni?\n\nHa a Music Assistant m\u00e1r fut egy m\u00e1sik alkalmaz\u00e1sban, egy\u00e9ni t\u00e1rol\u00f3ban (kont\u00e9nerben), nat\u00edvan stb., akkor ne v\u00e1lassza ezt a lehet\u0151s\u00e9get.",
+                "title": "Kapcsol\u00f3d\u00e1si m\u00f3d kiv\u00e1laszt\u00e1sa"
+            },
+            "onboarding": {
+                "description": "Nyissa meg a Music Assistantot, \u00e9s fejezze be a kezdeti be\u00e1ll\u00edt\u00e1st. A Home Assistant automatikusan folytatja, amint a be\u00e1ll\u00edt\u00e1s elk\u00e9sz\u00fclt.",
+                "title": "Music Assistant be\u00e1ll\u00edt\u00e1s\u00e1nak befejez\u00e9se"
+            },
+            "reauth_confirm": {
+                "description": "A(z) `{url}` Music Assistant szerver hiteles\u00edt\u00e9si tokenje m\u00e1r nem \u00e9rv\u00e9nyes. K\u00e9rj\u00fck, hiteles\u00edtse \u00fajra, hogy folytathassa az integr\u00e1ci\u00f3 haszn\u00e1lat\u00e1t.",
+                "title": "\u00dajrahiteles\u00edt\u00e9s sz\u00fcks\u00e9ges"
+            },
+            "reconfigure": {
+                "data": {
+                    "url": "URL"
+                },
+                "data_description": {
+                    "url": "A Music Assistant szerver URL-je"
+                }
+            },
+            "start_app": {
+                "title": "Alkalmaz\u00e1s ind\u00edt\u00e1sa"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "Jelenlegi dal kedvencek k\u00f6z\u00e9"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "11 csatorn\u00e1s sztere\u00f3",
+                            "2ch_stereo": "2 csatorn\u00e1s sztere\u00f3",
+                            "5ch_stereo": "5 csatorn\u00e1s sztere\u00f3",
+                            "7ch_stereo": "7 csatorn\u00e1s sztere\u00f3",
+                            "9ch_stereo": "9 csatorn\u00e1s sztere\u00f3",
+                            "action_game": "Akci\u00f3 j\u00e1t\u00e9k",
+                            "adventure": "Kaland",
+                            "all_ch_stereo": "Minden csatorna sztere\u00f3",
+                            "amsterdam": "Amszterdami hangterem",
+                            "arena": "Ar\u00e9na",
+                            "bass_booster": "Basszus er\u0151s\u00edt\u0151",
+                            "bottom_line": "The Bottom Line",
+                            "cellar_club": "Pinceklub",
+                            "chamber": "Kamaraterem",
+                            "concert": "\u00c9l\u0151 koncert",
+                            "disco": "Disco",
+                            "drama": "Dr\u00e1ma",
+                            "enhanced": "Jav\u00edtott",
+                            "frankfurt": "Frankfurti hangterem",
+                            "freiburg": "Freiburgi templom",
+                            "game": "J\u00e1t\u00e9k",
+                            "jazz_club": "Jazz klub",
+                            "mono_movie": "Mono film",
+                            "movie": "Film",
+                            "munich": "M\u00fcncheni hangterem",
+                            "munich_a": "M\u00fcncheni hangterem A",
+                            "munich_b": "M\u00fcncheni hangterem B",
+                            "music": "Zene",
+                            "music_video": "Zenevide\u00f3",
+                            "my_surround": "Saj\u00e1t t\u00e9rhat\u00e1s",
+                            "off": "Ki",
+                            "pavilion": "Pavilon",
+                            "recital_opera": "Sz\u00f3l\u00f3est/opera",
+                            "roleplaying_game": "Szerepj\u00e1t\u00e9k",
+                            "roxy_theatre": "Roxy Sz\u00ednh\u00e1z",
+                            "royaumont": "Royaumont-i templom",
+                            "sci-fi": "Sci-fi",
+                            "spectacle": "Sz\u00ednpadi el\u0151ad\u00e1s",
+                            "sports": "Sport",
+                            "standard": "Szabv\u00e1ny",
+                            "stereo": "Sztere\u00f3",
+                            "straight": "Egyenes",
+                            "stuttgart": "Stuttgarti hangterem",
+                            "surr_decoder": "T\u00e9rhat\u00e1s dek\u00f3der",
+                            "talk_show": "Talk show",
+                            "target": "C\u00e9l",
+                            "tokyo": "Toki\u00f3i templom",
+                            "tv_program": "TV m\u0171sor",
+                            "usa_a": "USA-beli hangterem A",
+                            "usa_b": "USA-beli hangterem B",
+                            "vienna": "B\u00e9csi hangterem",
+                            "village_gate": "Village Gate",
+                            "village_vanguard": "Village Vanguard",
+                            "warehouse_loft": "Rakt\u00e1r padl\u00e1s"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "M\u00e9ly"
+            },
+            "dialogue_level": {
+                "name": "P\u00e1rbesz\u00e9d szintje"
+            },
+            "dialogue_lift": {
+                "name": "P\u00e1rbesz\u00e9d kiemel\u00e9s"
+            },
+            "dts_dialogue_control": {
+                "name": "DTS p\u00e1rbesz\u00e9d vez\u00e9rl\u00e9s"
+            },
+            "equalizer_high": {
+                "name": "Equalizer magas"
+            },
+            "equalizer_low": {
+                "name": "Equalizer m\u00e9ly"
+            },
+            "equalizer_mid": {
+                "name": "Equalizer k\u00f6z\u00e9p"
+            },
+            "subwoofer_volume": {
+                "name": "M\u00e9lynyom\u00f3 hanger\u0151"
+            },
+            "treble": {
+                "name": "Magas"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "F\u00e9nyer\u0151szab\u00e1lyz\u00f3",
+                "state": {
+                    "auto": "Automatikus"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Equalizer m\u00f3d",
+                "state": {
+                    "auto": "Automatikus",
+                    "bypass": "\u00c1tugr\u00e1s",
+                    "manual": "K\u00e9zi"
+                }
+            },
+            "link_audio_delay": {
+                "name": "Link audio k\u00e9sleltet\u00e9s",
+                "state": {
+                    "audio_sync": "Audio szinkroniz\u00e1ci\u00f3",
+                    "audio_sync_off": "Audio szinkroniz\u00e1ci\u00f3 ki",
+                    "audio_sync_on": "Audio szinkroniz\u00e1ci\u00f3 be",
+                    "balanced": "Kiegyens\u00falyozott",
+                    "lip_sync": "Ajak szinkroniz\u00e1ci\u00f3"
+                }
+            },
+            "link_audio_quality": {
+                "name": "Link audio min\u0151s\u00e9g",
+                "state": {
+                    "compressed": "T\u00f6m\u00f6r\u00edtett",
+                    "uncompressed": "T\u00f6m\u00f6r\u00edtetlen"
+                }
+            },
+            "link_control": {
+                "name": "Link vez\u00e9rl\u00e9s",
+                "state": {
+                    "speed": "Sebess\u00e9g",
+                    "stability": "Stabilit\u00e1s",
+                    "standard": "Norm\u00e1l"
+                }
+            },
+            "sleep": {
+                "name": "Alv\u00e1si id\u0151z\u00edt\u0151",
+                "state": {
+                    "0": "Ki",
+                    "120": "120 perc",
+                    "30": "30 perc",
+                    "60": "60 perc",
+                    "90": "90 perc"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Surround dek\u00f3der t\u00edpus",
+                "state": {
+                    "auto": "Automatikus",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x J\u00e1t\u00e9k",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x Film",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x Music",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 Cinema",
+                    "dts_neo6_music": "DTS Neo:6 Music",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "Kapcsol\u00e1s"
+                }
+            },
+            "tone_control_mode": {
+                "name": "Hangsz\u00edn-szab\u00e1lyoz\u00e1s m\u00f3d",
+                "state": {
+                    "auto": "Automatikus",
+                    "bypass": "\u00c1tugr\u00e1s",
+                    "manual": "K\u00e9zi"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "Adapt\u00edv DRC"
+            },
+            "bass_extension": {
+                "name": "Basszus kiterjeszt\u00e9s"
+            },
+            "clear_voice": {
+                "name": "Tiszta hang"
+            },
+            "enhancer": {
+                "name": "Jav\u00edt\u00f3"
+            },
+            "extra_bass": {
+                "name": "Extra basszus"
+            },
+            "party_mode": {
+                "name": "Buli m\u00f3d"
+            },
+            "pure_direct": {
+                "name": "K\u00f6zvetlen"
+            },
+            "speaker_a": {
+                "name": "A hangsz\u00f3r\u00f3"
+            },
+            "speaker_b": {
+                "name": "B hangsz\u00f3r\u00f3"
+            },
+            "surround_3d": {
+                "name": "T\u00e9rhat\u00e1s\u00fa 3D"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "H\u00e1l\u00f3zat neve"
+            }
+        }
+    },
+    "exceptions": {
+        "app_not_running": {
+            "message": "A(z) {app} alkalmaz\u00e1s m\u00e9g nem fut."
+        },
+        "dashboard_display_not_available": {
+            "message": "A(z) {display} kijelz\u0151 nem el\u00e9rhet\u0151."
+        },
+        "dashboard_invalid_media_type": {
+            "message": "Az ir\u00e1ny\u00edt\u00f3pult-kijelz\u0151k kiz\u00e1r\u00f3lag a(z) {expected} m\u00e9diatartalom-t\u00edpust fogadj\u00e1k el, a kapott t\u00edpus: {media_type}."
+        },
+        "dashboard_media_not_found": {
+            "message": "A(z) {media_content_id} m\u00e9dia nem tal\u00e1lhat\u00f3."
+        },
+        "dashboard_now_playing_requires_player": {
+            "message": "A(z) {dashboard} ir\u00e1ny\u00edt\u00f3pulthoz lej\u00e1tsz\u00f3 sz\u00fcks\u00e9ges, a v\u00e1rt \u00e9rt\u00e9k: {expected}."
+        },
+        "dashboard_player_not_available": {
+            "message": "A(z) {player_id} lej\u00e1tsz\u00f3 ismeretlen, vagy nincs k\u00f6zz\u00e9t\u00e9ve a Home Assistant sz\u00e1m\u00e1ra."
+        },
+        "dashboard_type_not_supported": {
+            "message": "A(z) {display} kijelz\u0151 nem t\u00e1mogatja a(z) {dashboard} ir\u00e1ny\u00edt\u00f3pultot, a v\u00e1rt \u00e9rt\u00e9kek egyike: {valid_ids}."
+        },
+        "dashboard_unknown_type": {
+            "message": "A(z) {dashboard} ir\u00e1ny\u00edt\u00f3pult ismeretlen, a v\u00e1rt \u00e9rt\u00e9kek egyike: {valid_ids}."
+        },
+        "invalid_username": {
+            "message": "A(z) {username} felhaszn\u00e1l\u00f3n\u00e9v nem l\u00e9tezik a Music Assistant szerveren."
+        },
+        "tts_entity_not_available": {
+            "message": "A(z) {entity_id} sz\u00f6vegfelolvas\u00f3 entit\u00e1s nem el\u00e9rhet\u0151."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "Ellen\u0151rizze, hogy el\u00e9rhet\u0151k-e friss\u00edt\u00e9sek a Music Assistant szerverhez \u00e9s/vagy az integr\u00e1ci\u00f3hoz.",
+            "title": "A Music Assistant szerver verzi\u00f3ja nem megfelel\u0151"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "Album",
+                "compilation": "\u00d6ssze\u00e1ll\u00edt\u00e1s",
+                "ep": "EP",
+                "single": "Single",
+                "unknown": "Ismeretlen"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "Hozz\u00e1ad\u00e1s a v\u00e1r\u00f3list\u00e1hoz",
+                "next": "K\u00f6vetkez\u0151 lej\u00e1tsz\u00e1sa",
+                "play": "Lej\u00e1tsz\u00e1s",
+                "replace": "Lej\u00e1tsz\u00e1s most \u00e9s a v\u00e1r\u00f3lista t\u00f6rl\u00e9se",
+                "replace_next": "K\u00f6vetkez\u0151 lej\u00e1tsz\u00e1sa \u00e9s a v\u00e1r\u00f3lista t\u00f6rl\u00e9se"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "Album",
+                "artist": "El\u0151ad\u00f3",
+                "audiobook": "Hangosk\u00f6nyv",
+                "folder": "Mappa",
+                "playlist": "Lej\u00e1tsz\u00e1si lista",
+                "podcast": "Podcast",
+                "radio": "R\u00e1di\u00f3",
+                "track": "Sz\u00e1m"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "El\u0151ad\u00f3 neve",
+                "artist_name_desc": "El\u0151ad\u00f3 neve (cs\u00f6kken\u0151)",
+                "last_played": "Utolj\u00e1ra lej\u00e1tszva",
+                "last_played_desc": "Utolj\u00e1ra lej\u00e1tszva (cs\u00f6kken\u0151)",
+                "name": "N\u00e9v",
+                "name_desc": "N\u00e9v (cs\u00f6kken\u0151)",
+                "play_count": "Lej\u00e1tsz\u00e1sok sz\u00e1ma",
+                "play_count_desc": "Lej\u00e1tsz\u00e1sok sz\u00e1ma (cs\u00f6kken\u0151)",
+                "position": "Poz\u00edci\u00f3",
+                "position_desc": "Poz\u00edci\u00f3 (cs\u00f6kken\u0151)",
+                "random": "V\u00e9letlenszer\u0171",
+                "random_play_count": "V\u00e9letlenszer\u0171 + legkevesebbet lej\u00e1tszott",
+                "sort_name": "N\u00e9v szerint rendezve",
+                "sort_name_desc": "N\u00e9v szerint rendezve (cs\u00f6kken\u0151)",
+                "timestamp_added": "Hozz\u00e1ad\u00e1s ideje",
+                "timestamp_added_desc": "Hozz\u00e1ad\u00e1s ideje (cs\u00f6kken\u0151)",
+                "year": "\u00c9v",
+                "year_desc": "\u00c9v (cs\u00f6kken\u0151)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "Elemek lek\u00e9r\u00e9se a Music Assistant k\u00f6nyvt\u00e1r\u00e1b\u00f3l.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Csak az albumel\u0151ad\u00f3kat jelen\u00edti meg az el\u0151ad\u00f3k k\u00f6nyvt\u00e1ri elemeinek list\u00e1z\u00e1sakor.",
+                    "name": "Albumel\u0151ad\u00f3k sz\u0171r\u0151 enged\u00e9lyez\u00e9se (csak az el\u0151ad\u00f3k k\u00f6nyvt\u00e1r\u00e1hoz)"
+                },
+                "album_type": {
+                    "description": "Albumok sz\u0171r\u00e9se t\u00edpus szerint.",
+                    "name": "Albumt\u00edpus sz\u0171r\u0151 (csak az albumok k\u00f6nyvt\u00e1r\u00e1hoz)"
+                },
+                "config_entry_id": {
+                    "description": "V\u00e1lassza ki azt a Music Assistant p\u00e9ld\u00e1nyt, amelyen a keres\u00e9st v\u00e9gre k\u00edv\u00e1nja hajtani.",
+                    "name": "Music Assistant p\u00e9ld\u00e1ny"
+                },
+                "favorite": {
+                    "description": "Sz\u0171r\u00e9s kedvenc \u00e1llapot szerint. Enged\u00e9lyezze, ha csak a kedvelt elemeket szeretn\u00e9 visszakapni, tiltsa le, ha csak a nem kedvelt elemeket, vagy hagyja \u00fcresen a mez\u0151t az \u00f6sszes elem visszaad\u00e1s\u00e1hoz.",
+                    "name": "Kedvenc \u00e1llapot"
+                },
+                "limit": {
+                    "description": "Visszaadand\u00f3 elemek maxim\u00e1lis sz\u00e1ma.",
+                    "name": "Korl\u00e1t"
+                },
+                "media_type": {
+                    "description": "A m\u00e9dia t\u00edpusa, amelyhez r\u00e9szletek lek\u00e9r\u00e9se t\u00f6rt\u00e9nik.",
+                    "name": "M\u00e9dia t\u00edpus"
+                },
+                "offset": {
+                    "description": "Eltol\u00e1s, ahonnan a lista kezd\u0151dik.",
+                    "name": "Eltol\u00e1s"
+                },
+                "order_by": {
+                    "description": "A lista rendez\u00e9se ezen mez\u0151 alapj\u00e1n.",
+                    "name": "Rendez\u00e9s:"
+                },
+                "search": {
+                    "description": "Opcion\u00e1lis keres\u0151kifejez\u00e9s a k\u00f6nyvt\u00e1rban val\u00f3 keres\u00e9shez.",
+                    "name": "Keres\u00e9s"
+                },
+                "username": {
+                    "description": "A k\u00e9r\u00e9shez haszn\u00e1lt Music Assistant felhaszn\u00e1l\u00f3n\u00e9v. A felhaszn\u00e1l\u00f3n\u00e9v megad\u00e1sa eset\u00e9n a felhaszn\u00e1l\u00f3 be\u00e1ll\u00edtott szolg\u00e1ltat\u00f3i sz\u0171r\u0151i \u00e9rv\u00e9nyes\u00fclnek.",
+                    "name": "Felhaszn\u00e1l\u00f3n\u00e9v"
+                }
+            },
+            "name": "K\u00f6nyvt\u00e1ri elemek lek\u00e9r\u00e9se",
+            "sections": {
+                "pagination": {
+                    "name": "Lapoz\u00e1s"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "Lek\u00e9ri a Music Assistant lej\u00e1tsz\u00f3 aktu\u00e1lisan akt\u00edv lej\u00e1tsz\u00e1si sor\u00e1nak r\u00e9szleteit.",
+            "name": "Lej\u00e1tsz\u00e1si sor r\u00e9szleteinek lek\u00e9r\u00e9se"
+        },
+        "play_announcement": {
+            "description": "Lej\u00e1tszik egy bejelent\u00e9st egy Music Assistant lej\u00e1tsz\u00f3n, tov\u00e1bbi r\u00e9szletes vez\u00e9rl\u00e9si lehet\u0151s\u00e9gekkel.",
+            "fields": {
+                "announce_volume": {
+                    "description": "K\u00e9nyszer\u00edtett hanger\u0151szint haszn\u00e1lata a bejelent\u00e9shez. Ha nem adja meg, az alap\u00e9rtelmezett lej\u00e1tsz\u00f3 hanger\u0151 lesz haszn\u00e1lva.",
+                    "name": "Bejelent\u00e9s hanger\u0151"
+                },
+                "message": {
+                    "description": "A bemondand\u00f3 sz\u00f6veg, amelyet a kiv\u00e1lasztott sz\u00f6vegfelolvas\u00f3 entit\u00e1s olvas fel. Adjon meg \u00fczenetet vagy URL-t.",
+                    "name": "\u00dczenet"
+                },
+                "pre_announce_url": {
+                    "description": "A bejelent\u00e9s el\u0151tti hang URL-je.",
+                    "name": "Bejelent\u00e9s el\u0151tti URL"
+                },
+                "tts_entity_id": {
+                    "description": "Az \u00fczenetet felolvas\u00f3 sz\u00f6vegfelolvas\u00f3 entit\u00e1s. \u00dczenet megad\u00e1sa eset\u00e9n k\u00f6telez\u0151.",
+                    "name": "Sz\u00f6vegfelolvas\u00f3 entit\u00e1s"
+                },
+                "url": {
+                    "description": "A k\u00f6zlem\u00e9nyhang URL-je. Adjon meg \u00fczenetet vagy URL-t.",
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Haszn\u00e1ljon el\u0151zetes bejelent\u00e9s hangot a bejelent\u00e9shez. Ha nem adja meg, az alap\u00e9rtelmezett lej\u00e1tsz\u00f3hang lesz haszn\u00e1lva.",
+                    "name": "El\u0151zetes bejelent\u00e9s haszn\u00e1lata"
+                }
+            },
+            "name": "Bejelent\u00e9s lej\u00e1tsz\u00e1sa"
+        },
+        "play_media": {
+            "description": "M\u00e9di\u00e1t j\u00e1tszik le egy Music Assistant lej\u00e1tsz\u00f3n, r\u00e9szletesebb vez\u00e9rl\u00e9si lehet\u0151s\u00e9gekkel.",
+            "fields": {
+                "album": {
+                    "description": "Ha n\u00e9v szerint ad meg egy sz\u00e1mot a M\u00e9diaazonos\u00edt\u00f3 mez\u0151ben, opcion\u00e1lisan sz\u0171k\u00edtheti a tal\u00e1latokat ezzel az albumc\u00edmmel.",
+                    "name": "Album neve"
+                },
+                "artist": {
+                    "description": "Ha n\u00e9v szerint ad meg egy sz\u00e1mot vagy albumot a M\u00e9diaazonos\u00edt\u00f3 mez\u0151ben, opcion\u00e1lisan sz\u0171k\u00edtheti a tal\u00e1latokat ezzel az el\u0151ad\u00f3i n\u00e9vvel.",
+                    "name": "El\u0151ad\u00f3 neve"
+                },
+                "enqueue": {
+                    "description": "Meghat\u00e1rozza, hogy a tartalmat azonnal le kell-e j\u00e1tszani vagy hozz\u00e1 kell adni a lej\u00e1tsz\u00e1si list\u00e1hoz.",
+                    "name": "Lej\u00e1tsz\u00e1si list\u00e1hoz ad"
+                },
+                "media_id": {
+                    "description": "A lej\u00e1tszand\u00f3 elem URI-ja vagy neve. Ha t\u00f6bb elemet szeretne lej\u00e1tszani vagy a v\u00e1r\u00f3list\u00e1hoz hozz\u00e1adni, adjon meg egy list\u00e1t.",
+                    "name": "M\u00e9diaazonos\u00edt\u00f3"
+                },
+                "media_type": {
+                    "description": "A lej\u00e1tszand\u00f3 tartalom t\u00edpusa, p\u00e9ld\u00e1ul el\u0151ad\u00f3, album, sz\u00e1m vagy lej\u00e1tsz\u00e1si lista. Ha nincs megadva, automatikusan meghat\u00e1roz\u00e1sra ker\u00fcl.",
+                    "name": "M\u00e9dia t\u00edpus"
+                },
+                "radio_mode": {
+                    "description": "Enged\u00e9lyezze a r\u00e1di\u00f3 m\u00f3dot, hogy az automatikusan lej\u00e1tsz\u00e1si list\u00e1t gener\u00e1ljon a kiv\u00e1laszt\u00e1s alapj\u00e1n.",
+                    "name": "R\u00e1di\u00f3 m\u00f3d enged\u00e9lyez\u00e9se"
+                },
+                "start_item": {
+                    "description": "Az az elem, amelyt\u0151l a lej\u00e1tsz\u00e1s indul az els\u0151 helyett. Haszn\u00e1lja a `latest` \u00e9rt\u00e9ket, hogy egy podcastot a leg\u00fajabb epiz\u00f3dj\u00e1t\u00f3l j\u00e1tsszon le, vagy adja meg annak a sz\u00e1mnak vagy epiz\u00f3dnak az URI-j\u00e1t, azonos\u00edt\u00f3j\u00e1t vagy nev\u00e9nek egy r\u00e9sz\u00e9t (legal\u00e1bb 3 karakter), amelyt\u0151l ind\u00edtani szeretn\u00e9.",
+                    "name": "Kezd\u0151elem"
+                },
+                "username": {
+                    "description": "A m\u00e9dialej\u00e1tsz\u00e1si k\u00e9r\u00e9shez haszn\u00e1lt Music Assistant felhaszn\u00e1l\u00f3n\u00e9v. Ez befoly\u00e1solja a lej\u00e1tsz\u00e1si napl\u00f3 bejegyz\u00e9s\u00e9t, \u00e9s figyelembe veszi a felhaszn\u00e1l\u00f3 szolg\u00e1ltat\u00f3i sz\u0171r\u0151it. Alap\u00e9rtelmez\u00e9s szerint a k\u00e9r\u00e9st ind\u00edt\u00f3 Home Assistant felhaszn\u00e1l\u00f3hoz kapcsolt Music Assistant felhaszn\u00e1l\u00f3 van haszn\u00e1latban. Ha nincs kapcsolt felhaszn\u00e1l\u00f3, a k\u00e9r\u00e9s az alap\u00e9rtelmezett fi\u00f3kkal fut le.",
+                    "name": "Felhaszn\u00e1l\u00f3n\u00e9v"
+                }
+            },
+            "name": "M\u00e9dia lej\u00e1tsz\u00e1sa"
+        },
+        "search": {
+            "description": "Glob\u00e1lis keres\u00e9s v\u00e9grehajt\u00e1sa a Music Assistant k\u00f6nyvt\u00e1r\u00e1ban \u00e9s az \u00f6sszes szolg\u00e1ltat\u00f3n\u00e1l.",
+            "fields": {
+                "album": {
+                    "description": "Ha a n\u00e9v mez\u0151ben egy sz\u00e1mc\u00edmet ad meg, az eredm\u00e9nyek opcion\u00e1lisan sz\u0171k\u00edthet\u0151k az album nev\u00e9re.",
+                    "name": "Album neve"
+                },
+                "artist": {
+                    "description": "Ha a n\u00e9v mez\u0151ben egy sz\u00e1m- vagy albumc\u00edmet ad meg, az eredm\u00e9nyek opcion\u00e1lisan sz\u0171k\u00edthet\u0151k az el\u0151ad\u00f3 nev\u00e9re.",
+                    "name": "El\u0151ad\u00f3 neve"
+                },
+                "config_entry_id": {
+                    "description": "V\u00e1lassza ki azt a Music Assistant p\u00e9ld\u00e1nyt, amelyen a keres\u00e9st v\u00e9gre k\u00edv\u00e1nja hajtani.",
+                    "name": "Music Assistant p\u00e9ld\u00e1ny"
+                },
+                "library_only": {
+                    "description": "Csak a k\u00f6nyvt\u00e1rban tal\u00e1lhat\u00f3 eredm\u00e9nyek szerepeljenek.",
+                    "name": "Csak k\u00f6nyvt\u00e1ri elemek"
+                },
+                "limit": {
+                    "description": "Visszaadand\u00f3 elemek maxim\u00e1lis sz\u00e1ma (m\u00e9diat\u00edpusonk\u00e9nt).",
+                    "name": "Korl\u00e1t"
+                },
+                "media_type": {
+                    "description": "A keresend\u0151 tartalom t\u00edpusa, p\u00e9ld\u00e1ul el\u0151ad\u00f3, album, sz\u00e1m, r\u00e1di\u00f3 vagy lej\u00e1tsz\u00e1si lista. Ha nincs megadva, minden t\u00edpus keres\u00e9sre ker\u00fcl.",
+                    "name": "M\u00e9dia t\u00edpus"
+                },
+                "name": {
+                    "description": "A keresend\u0151 n\u00e9v/c\u00edm.",
+                    "name": "Keres\u00e9s neve"
+                },
+                "username": {
+                    "description": "A keres\u00e9shez haszn\u00e1lt Music Assistant felhaszn\u00e1l\u00f3n\u00e9v. A keres\u00e9sek figyelembe veszik a felhaszn\u00e1l\u00f3 be\u00e1ll\u00edtott szolg\u00e1ltat\u00f3i sz\u0171r\u0151it. Alap\u00e9rtelmez\u00e9s szerint a k\u00e9r\u00e9st ind\u00edt\u00f3 Home Assistant felhaszn\u00e1l\u00f3hoz kapcsolt Music Assistant felhaszn\u00e1l\u00f3 van haszn\u00e1latban. Ha nincs kapcsolt felhaszn\u00e1l\u00f3, a k\u00e9r\u00e9s az alap\u00e9rtelmezett fi\u00f3kkal fut le.",
+                    "name": "Felhaszn\u00e1l\u00f3n\u00e9v"
+                }
+            },
+            "name": "Keres\u00e9s a Music Assistantban",
+            "sections": {
+                "search_options": {
+                    "name": "Keres\u00e9si be\u00e1ll\u00edt\u00e1sok"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "\u00c1thelyezi egy lej\u00e1tsz\u00f3 lej\u00e1tsz\u00e1si sor\u00e1t egy m\u00e1sik lej\u00e1tsz\u00f3ra.",
+            "fields": {
+                "auto_play": {
+                    "description": "Kezdje el lej\u00e1tszani a v\u00e1r\u00f3list\u00e1t a c\u00e9llej\u00e1tsz\u00f3n. Ha nincs megadva, az alap\u00e9rtelmezett m\u0171k\u00f6d\u00e9s l\u00e9p \u00e9letbe.",
+                    "name": "Automatikus lej\u00e1tsz\u00e1s"
+                },
+                "source_player": {
+                    "description": "Az a forr\u00e1s m\u00e9dialej\u00e1tsz\u00f3, amelynek v\u00e1r\u00f3list\u00e1j\u00e1t \u00e1t szeretn\u00e9 helyezni. Ha nincs megadva, az els\u0151 lej\u00e1tsz\u00f3, amely \u00e9ppen j\u00e1tszik, ker\u00fcl felhaszn\u00e1l\u00e1sra.",
+                    "name": "Forr\u00e1s m\u00e9dialej\u00e1tsz\u00f3"
+                }
+            },
+            "name": "V\u00e1r\u00f3lista \u00e1tvitele"
+        }
+    }
+}

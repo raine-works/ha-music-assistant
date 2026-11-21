@@ -1,0 +1,492 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Seade on juba h\u00e4\u00e4lestatud",
+            "already_in_progress": "Seda juba konfigureeritakse. Enne uuesti alustamist l\u00f5peta olemasolev konfigureerimine.",
+            "auth_error": "Tuvastusviga, proovi uuesti",
+            "auth_failed": "Tuvastamine nurjus, proovi uuesti",
+            "cannot_connect": "\u00dchendamine nurjus",
+            "invalid_server_version": "Music Assistanti server pole \u00f5ige versioon",
+            "unknown": "Ootamatu t\u00f5rge"
+        },
+        "error": {
+            "auth_failed": "Tuvastamine nurjus, proovi uuesti",
+            "cannot_connect": "\u00dchendamine nurjus",
+            "invalid_server_version": "Music Assistanti server pole \u00f5ige versioon",
+            "unknown": "Ootamatu t\u00f5rge"
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Pikaajaline juurdep\u00e4\u00e4suluba"
+                },
+                "data_description": {
+                    "token": "Loo oma Music Assistant serveri seadetes pikaajaline juurdep\u00e4\u00e4suluba ja kleebi see siia."
+                },
+                "title": "Sisesta pikaajaline juurdep\u00e4\u00e4suluba"
+            },
+            "discovery_confirm": {
+                "description": "Kas lisada Music Assistanti server `{url}` Home Assistant'ile?",
+                "title": "Avastatud Music Assistanti server"
+            },
+            "hassio_confirm": {
+                "description": "Kas lisada Music Assistant Home Assistantisse?",
+                "title": "Avastati Music Assistanti rakendus"
+            },
+            "reauth_confirm": {
+                "description": "Music Assistant'i serveri `{url}` autentimist\u00e4his ei ole enam kehtiv. Taastuvasta, et j\u00e4tkata sidumise kasutamist.",
+                "title": "N\u00f5utav on taastuvastamine"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "Praegune lemmiklaul"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "11ch stereo",
+                            "2ch_stereo": "2ch stereo",
+                            "5ch_stereo": "5ch stereo",
+                            "7ch_stereo": "7ch stereo",
+                            "9ch_stereo": "9ch stereo",
+                            "action_game": "Action game",
+                            "adventure": "Adventure",
+                            "all_ch_stereo": "All ch stereo",
+                            "amsterdam": "Hall in Amsterdam",
+                            "arena": "Arena",
+                            "bass_booster": "Bass booster",
+                            "bottom_line": "The Bottom Line",
+                            "cellar_club": "Cellar club",
+                            "chamber": "Chamber",
+                            "concert": "Live concert",
+                            "disco": "Disco",
+                            "drama": "Drama",
+                            "enhanced": "Enhanced",
+                            "frankfurt": "Hall in Frankfurt",
+                            "freiburg": "Church in Freiburg",
+                            "game": "Game",
+                            "jazz_club": "Jazz club",
+                            "mono_movie": "Mono movie",
+                            "movie": "Movie",
+                            "munich": "Hall in Munich",
+                            "munich_a": "Hall in Munich A",
+                            "munich_b": "Hall in Munich B",
+                            "music": "Music",
+                            "music_video": "Music video",
+                            "my_surround": "My surround",
+                            "off": "V\u00e4ljas",
+                            "pavilion": "Pavilion",
+                            "recital_opera": "Recital/opera",
+                            "roleplaying_game": "Roleplaying game",
+                            "roxy_theatre": "The Roxy Theatre",
+                            "royaumont": "Church in Royaumont",
+                            "sci-fi": "Sci-fi",
+                            "spectacle": "Spectacle",
+                            "sports": "Sports",
+                            "standard": "Standard",
+                            "stereo": "Stereo",
+                            "straight": "Straight",
+                            "stuttgart": "Hall in Stuttgart",
+                            "surr_decoder": "Surround decoder",
+                            "talk_show": "Talk show",
+                            "target": "Target",
+                            "tokyo": "Church in Tokyo",
+                            "tv_program": "TV program",
+                            "usa_a": "Hall in USA A",
+                            "usa_b": "Hall in USA B",
+                            "vienna": "Hall in Vienna",
+                            "village_gate": "Village Gate",
+                            "village_vanguard": "Village vanguard",
+                            "warehouse_loft": "Warehouse loft"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "Bassid"
+            },
+            "dialogue_level": {
+                "name": "Dialoogi tase"
+            },
+            "dialogue_lift": {
+                "name": "Dialoogi t\u00f5stmine"
+            },
+            "dts_dialogue_control": {
+                "name": "DTS dialoogi juhtimine"
+            },
+            "equalizer_high": {
+                "name": "Ekvalaiser k\u00f5rge"
+            },
+            "equalizer_low": {
+                "name": "Ekvalaiser madal"
+            },
+            "equalizer_mid": {
+                "name": "Ekvalaiseri keskosa"
+            },
+            "subwoofer_volume": {
+                "name": "Subwooferi helitugevus"
+            },
+            "treble": {
+                "name": "K\u00f5rged"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "H\u00e4mardaja",
+                "state": {
+                    "auto": "Automaatne"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Ekvalaiseri re\u017eiim",
+                "state": {
+                    "auto": "Automaatne",
+                    "bypass": "M\u00f6\u00f6daviik",
+                    "manual": "K\u00e4sitsi"
+                }
+            },
+            "link_audio_delay": {
+                "name": "Lingi heli viivitus",
+                "state": {
+                    "audio_sync": "Heli s\u00fcnkroonimine",
+                    "audio_sync_off": "Heli s\u00fcnkroonimine v\u00e4ljas",
+                    "audio_sync_on": "Heli s\u00fcnkroonimine sees",
+                    "balanced": "Tasakaalustatud",
+                    "lip_sync": "Huulte s\u00fcnkroonimine"
+                }
+            },
+            "link_audio_quality": {
+                "name": "\u00dchenduse helikvaliteet",
+                "state": {
+                    "compressed": "Tihendatud",
+                    "uncompressed": "Tihendamata"
+                }
+            },
+            "link_control": {
+                "name": "\u00dchenduse juhtimine",
+                "state": {
+                    "speed": "Kiirus",
+                    "stability": "Stabiilsus",
+                    "standard": "Tavaline"
+                }
+            },
+            "sleep": {
+                "name": "Unetaimer",
+                "state": {
+                    "0": "V\u00e4ljas",
+                    "120": "120 minutit",
+                    "30": "30 minutit",
+                    "60": "60 minutit",
+                    "90": "90 minutit"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Ruumilise heli dekoodri t\u00fc\u00fcp",
+                "state": {
+                    "auto": "Automaatne",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x Game",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x Movie",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x Music",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 Cinema",
+                    "dts_neo6_music": "DTS Neo:6 Music",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "Muuda olekut"
+                }
+            },
+            "tone_control_mode": {
+                "name": "T\u00e4mbri juhtimise re\u017eiim",
+                "state": {
+                    "auto": "Automaatne",
+                    "bypass": "M\u00f6\u00f6daviik",
+                    "manual": "K\u00e4sitsi"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "Adaptiivne DRC"
+            },
+            "bass_extension": {
+                "name": "Bassi laiendamine"
+            },
+            "clear_voice": {
+                "name": "Selge h\u00e4\u00e4l"
+            },
+            "enhancer": {
+                "name": "Tugevdaja"
+            },
+            "extra_bass": {
+                "name": "Lisabass"
+            },
+            "party_mode": {
+                "name": "Peore\u017eiim"
+            },
+            "pure_direct": {
+                "name": "Pure direct"
+            },
+            "speaker_a": {
+                "name": "K\u00f5lar A"
+            },
+            "speaker_b": {
+                "name": "K\u00f5lar B"
+            },
+            "surround_3d": {
+                "name": "Surround 3D"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "V\u00f5rgu nimi"
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_username": {
+            "message": "Kasutajanimi {username} ei eksisteeri Music Assistant serveris."
+        },
+        "tts_entity_not_available": {
+            "message": "Teksti k\u00f5neks teisendav \u00fcksus {entity_id} pole saadaval."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "Kontrolli kas Music Assistant serveri ja/v\u00f5i sidumise jaoks on saadaval v\u00e4rskendusi.",
+            "title": "Music Assistanti server pole \u00f5ige versioon"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "Album",
+                "compilation": "Valik",
+                "ep": "EP",
+                "single": "Singelplaat",
+                "unknown": "Teadmata"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "Lisa j\u00e4rjekorda",
+                "next": "Esita j\u00e4rgmine",
+                "play": "Esita",
+                "replace": "Esita kohe ja t\u00fchjenda j\u00e4rjekord",
+                "replace_next": "Esita j\u00e4rgmine ja t\u00fchjenda j\u00e4rjekord"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "Album",
+                "artist": "Esitaja",
+                "audiobook": "Audioraamat",
+                "folder": "Kaust",
+                "playlist": "Esitusloend",
+                "podcast": "Taskuh\u00e4\u00e4ling",
+                "radio": "Raadio",
+                "track": "Lugu"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "Esitaja nimi",
+                "artist_name_desc": "Esitaja nimi (kahanev)",
+                "last_played": "Viimati esitatud",
+                "last_played_desc": "Viimati esitatud (kahanev)",
+                "name": "Nimi",
+                "name_desc": "Nimi (kahanev)",
+                "play_count": "Esituste arv",
+                "play_count_desc": "Esituste arv (v\u00e4henev)",
+                "position": "Asukoht",
+                "position_desc": "Asukoha j\u00e4rgi (kahanev)",
+                "random": "Juhuslik",
+                "random_play_count": "Juhuslik + k\u00f5ige v\u00e4hem m\u00e4ngitud",
+                "sort_name": "Sorteeri nime j\u00e4rgi",
+                "sort_name_desc": "Sorteeri nime j\u00e4rgi (kahanev)",
+                "timestamp_added": "Lisatud",
+                "timestamp_added_desc": "Lisatud (kahanev)",
+                "year": "Aasta",
+                "year_desc": "Aasta (kahanev)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "Hangib \u00fcksusi Music Assistanti teegist.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Tagasta albumi esitajad ainult esitajate teegi \u00fcksuste loetlemisel.",
+                    "name": "Albumi esitajate filtri lubamine (ainult esitajateegi jaoks)"
+                },
+                "album_type": {
+                    "description": "Filtreeri albumeid t\u00fc\u00fcbi j\u00e4rgi.",
+                    "name": "Albumi t\u00fc\u00fcbi filter (ainult albumite teek)"
+                },
+                "config_entry_id": {
+                    "description": "Vali Music Assistant'i instants mille kohta soovid otsingut teha.",
+                    "name": "Muusikaassistendi eksemplar"
+                },
+                "limit": {
+                    "description": "Tagastatavate \u00fcksuste maksimaalne arv.",
+                    "name": "Piirang"
+                },
+                "media_type": {
+                    "description": "Meediumit\u00fc\u00fcp mille kohta \u00fcksikasju k\u00fcsida.",
+                    "name": "Meedia t\u00fc\u00fcp"
+                },
+                "offset": {
+                    "description": "Nihe loendi alustamiseks.",
+                    "name": "Nihe"
+                },
+                "order_by": {
+                    "description": "Sorteeri loend selle v\u00e4lja j\u00e4rgi.",
+                    "name": "J\u00e4rjestamise alus"
+                },
+                "search": {
+                    "description": "Valikuline otsingustring selle teegi kaudu otsimiseks.",
+                    "name": "Otsing"
+                },
+                "username": {
+                    "description": "Selle p\u00e4ringu puhul kasutati Music Assistant\u2019i kasutajanime. Kasutajanime esitamisel v\u00f5etakse arvesse kasutaja poolt seadistatud teenusepakkuja filtreid.",
+                    "name": "Kasutajanimi"
+                }
+            },
+            "name": "Hangi teegi\u00fcksused",
+            "sections": {
+                "pagination": {
+                    "name": "Lehek\u00fclgede arv"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "Hangib Music Assistanti pleieri hetkel aktiivse j\u00e4rjekorra \u00fcksikasjad.",
+            "name": "Hangi playerQueue \u00fcksikasjad"
+        },
+        "play_announcement": {
+            "description": "Esitab teadaannet Music Assistanti pleieris, millel on t\u00e4psemad juhtimisv\u00f5imalused.",
+            "fields": {
+                "announce_volume": {
+                    "description": "Kasuta teadaande jaoks sunnitud helitugevust. J\u00e4ta m\u00e4ngija vaikes\u00e4te kasutamata.",
+                    "name": "Teavituse helitugevus"
+                },
+                "message": {
+                    "description": "Teadaanne, mida loeb ette valitud teksti-k\u00f5neks-muundamise teenus. Sisesta kas s\u00f5num v\u00f5i URL-aadress.",
+                    "name": "S\u00f5num"
+                },
+                "pre_announce_url": {
+                    "description": "Eelteatamise heli URL.",
+                    "name": "Eelteatamise URL"
+                },
+                "tts_entity_id": {
+                    "description": "K\u00f5nes\u00fcnteesi\u00fcksus, mis loeb ette s\u00f5numi. N\u00f5utav s\u00f5numi edastamisel.",
+                    "name": "Teksti k\u00f5neks teisendav \u00fcksus"
+                },
+                "url": {
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Kasuta teadaande esitamiseks eelteate heli. J\u00e4ta m\u00e4ngija vaikes\u00e4te kasutamata.",
+                    "name": "Kasuta eelteavitust"
+                }
+            },
+            "name": "Esita teadaanne"
+        },
+        "play_media": {
+            "description": "Esitab meediat Music Assistant-m\u00e4ngijas, millel on t\u00e4psemad juhtimisv\u00f5imalused.",
+            "fields": {
+                "album": {
+                    "description": "Kui m\u00e4\u00e4rad loo nime j\u00e4rgi v\u00e4ljal Media ID, saad valikuliselt piirata tulemusi selle albumi nimega.",
+                    "name": "Albumi nimi"
+                },
+                "artist": {
+                    "description": "Kui m\u00e4\u00e4rad loo v\u00f5i albumi nime j\u00e4rgi v\u00e4ljal Meediumi ID, saad valikuliselt piirata tulemusi selle esitaja nimega.",
+                    "name": "Esitaja nimi"
+                },
+                "enqueue": {
+                    "description": "Kui sisu tuleks esitada kohe v\u00f5i lisada j\u00e4rjekorda.",
+                    "name": "Pane j\u00e4rjekorda"
+                },
+                "media_id": {
+                    "description": "URI v\u00f5i selle \u00fcksuse nimi, mida soovid m\u00e4ngida. M\u00e4\u00e4ra loend kui soovid esitada/j\u00e4rjekorda panna mitu \u00fcksust.",
+                    "name": "Meedia ID(d)"
+                },
+                "media_type": {
+                    "description": "Esitatava sisu t\u00fc\u00fcp. N\u00e4iteks esitaja, album, lugu v\u00f5i esitusloend. V\u00e4ljaj\u00e4tmisel m\u00e4\u00e4ratakse see automaatselt.",
+                    "name": "Meedia t\u00fc\u00fcp"
+                },
+                "radio_mode": {
+                    "description": "Valiku alusel esitusloendi automaatseks genereerimiseks luba raadiore\u017eiim.",
+                    "name": "Luba raadiore\u017eiim"
+                },
+                "username": {
+                    "name": "Kasutajanimi"
+                }
+            },
+            "name": "Esita sisu"
+        },
+        "search": {
+            "description": "Teeb otsingu Music Assistanti teegis ja k\u00f5igis pakkujates.",
+            "fields": {
+                "album": {
+                    "description": "Loo nime m\u00e4\u00e4ramisel nimev\u00e4ljal saad valikuliselt piirata tulemusi selle albumi nimega.",
+                    "name": "Albumi nimi"
+                },
+                "artist": {
+                    "description": "Loo v\u00f5i albumi nime m\u00e4\u00e4ramisel nimev\u00e4ljal saad valikuliselt piirata tulemusi selle esitaja nimega.",
+                    "name": "Esitaja nimi"
+                },
+                "config_entry_id": {
+                    "description": "Vali Music Assistant'i instants mille kohta soovid otsingut teha.",
+                    "name": "Muusikaassistendi eksemplar"
+                },
+                "library_only": {
+                    "description": "Kaasa ainult teegis olevad tulemused.",
+                    "name": "Ainult muusikateegis \u00fcksused"
+                },
+                "limit": {
+                    "description": "Tagastatavate elementide maksimaalne arv (iga meediat\u00fc\u00fcbi kohta).",
+                    "name": "Piirang"
+                },
+                "media_type": {
+                    "description": "Otsitava sisu t\u00fc\u00fcp. N\u00e4iteks esitaja, album, lugu, raadiojaam v\u00f5i esitusloend. K\u00f5ik t\u00fc\u00fcbid kui need on v\u00e4lja j\u00e4etud.",
+                    "name": "Meedia t\u00fc\u00fcbid"
+                },
+                "name": {
+                    "description": "Nimi/pealkiri mida otsida.",
+                    "name": "Otsi nime"
+                },
+                "username": {
+                    "name": "Kasutajanimi"
+                }
+            },
+            "name": "Otsi muusikaabilisest",
+            "sections": {
+                "search_options": {
+                    "name": "Otsinguvalikud"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "Edastab m\u00e4ngija j\u00e4rjekorra teisele m\u00e4ngijale.",
+            "fields": {
+                "auto_play": {
+                    "description": "Alusta j\u00e4rjekorra m\u00e4ngimist sihtm\u00e4ngijal. J\u00e4ta vaikek\u00e4itumine kasutamata.",
+                    "name": "Automaatne esitus"
+                },
+                "source_player": {
+                    "description": "L\u00e4htemeediumipleier, millel on j\u00e4rjekord, mida soovid \u00fcle kanda. V\u00e4ljaj\u00e4tmisel kasutatakse esimesena m\u00e4ngivat m\u00e4ngijat.",
+                    "name": "Vali meediam\u00e4ngija"
+                }
+            },
+            "name": "\u00dclekande j\u00e4rjekord"
+        }
+    }
+}

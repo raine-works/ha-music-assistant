@@ -1,0 +1,573 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ure\u0111aj je ve\u0107 pode\u0161en",
+            "already_in_progress": "Ovo se ve\u0107 konfiguri\u0161e. Zavr\u0161ite postoje\u0107e pode\u0161avanje pre nego \u0161to poku\u0161ate ponovo.",
+            "app_get_discovery_info_failed": "Preuzimanje informacija o automatskom otkrivanju Music Assistant aplikacije nije uspelo.",
+            "app_info_failed": "Preuzimanje informacija o Music Assistant aplikaciji nije uspelo.",
+            "app_install_failed": "Instalacija Music Assistant aplikacije nije uspela.",
+            "app_start_failed": "Pokretanje Music Assistant aplikacije nije uspelo.",
+            "auth_error": "Gre\u0161ka pri prijavljivanju, poku\u0161ajte ponovo",
+            "auth_failed": "Prijava nije uspela, poku\u0161ajte ponovo",
+            "cannot_connect": "Povezivanje nije uspelo",
+            "invalid_server_version": "Music Assistant server nije odgovaraju\u0107e verzije",
+            "no_url_available": "Adresa nije dostupna. Za informacije o ovoj gre\u0161ci, [pogledajte odeljak za pomo\u0107]({docs_url})",
+            "unique_id_mismatch": "Navedeni URL pripada drugom Music Assistant serveru.",
+            "unknown": "Neo\u010dekivana gre\u0161ka"
+        },
+        "error": {
+            "auth_failed": "Prijava nije uspela, poku\u0161ajte ponovo",
+            "cannot_connect": "Povezivanje nije uspelo",
+            "invalid_server_version": "Music Assistant server nije odgovaraju\u0107e verzije",
+            "unknown": "Neo\u010dekivana gre\u0161ka"
+        },
+        "progress": {
+            "install_app": "Molimo sa\u010dekajte dok se zavr\u0161i instalacija Music Assistant aplikacije. Ovo mo\u017ee potrajati nekoliko minuta.",
+            "start_app": "Molimo sa\u010dekajte dok se pokrene Music Assistant aplikacija. Ovo mo\u017ee potrajati nekoliko sekundi."
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Token za dugotrajni pristup"
+                },
+                "data_description": {
+                    "token": "Kreirajte token za dugotrajni pristup u pode\u0161avanjima Music Assistant servera i nalepite ga ovde."
+                },
+                "title": "Unos tokena za dugotrajni pristup"
+            },
+            "discovery_confirm": {
+                "description": "\u017delite li da dodate Music Assistant server {url} u Home Assistant?",
+                "title": "Otkriven Music Assistant server"
+            },
+            "hassio_confirm": {
+                "description": "Da li \u017eelite da dodate Music Assistant server u Home Assistant?",
+                "title": "Otkrivena aplikacija Music Assistant"
+            },
+            "install_app": {
+                "title": "Instalacija aplikacije je pokrenuta"
+            },
+            "manual": {
+                "data": {
+                    "url": "URL adresa"
+                },
+                "data_description": {
+                    "url": "URL adresa Music Assistant servera"
+                }
+            },
+            "on_supervisor": {
+                "data": {
+                    "use_app": "Koristi zvani\u010dnu Music Assistant aplikaciju"
+                },
+                "data_description": {
+                    "use_app": "Home Assistant \u0107e po potrebi sam instalirati i pokrenuti aplikaciju."
+                },
+                "description": "Da li \u017eelite da koristite zvani\u010dnu Music Assistant aplikaciju?\n\nAko ve\u0107 pokre\u0107ete Music Assistant u okviru druge aplikacije, u prilago\u0111enom kontejneru (custom container), nativno i sli\u010dno, nemojte izabrati ovu opciju.",
+                "title": "Izbor na\u010dina povezivanja"
+            },
+            "onboarding": {
+                "description": "Otvorite Music Assistant i zavr\u0161ite njegovo po\u010detno pode\u0161avanje. Home Assistant \u0107e automatski nastaviti kada se pode\u0161avanje zavr\u0161i.",
+                "title": "Zavr\u0161etak pode\u0161avanja Music Assistant-a"
+            },
+            "reauth_confirm": {
+                "description": "Token za prijavu na Music Assistant server `{url}`vi\u0161e nije va\u017ee\u0107i. Ponovo se prijavite kako biste nastavili sa kori\u0161\u0107enjem integracije.",
+                "title": "Potrebna je ponovna prijava"
+            },
+            "reconfigure": {
+                "data": {
+                    "url": "URL adresa"
+                },
+                "data_description": {
+                    "url": "URL adresa Music Assistant servera"
+                }
+            },
+            "start_app": {
+                "title": "Pokretanje aplikacije"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "Omiljena trenutna pesma"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "11-kanalni stereo",
+                            "2ch_stereo": "2-kanalni stereo",
+                            "5ch_stereo": "5-kanalni stereo",
+                            "7ch_stereo": "7-kanalni stereo",
+                            "9ch_stereo": "9-kanalni stereo",
+                            "action_game": "Akcione igre",
+                            "adventure": "Avanturisti\u010dki film",
+                            "all_ch_stereo": "Vi\u0161ekanalni stereo",
+                            "amsterdam": "Amsterdamska dvorana",
+                            "arena": "Arena",
+                            "bass_booster": "Poja\u010diva\u010d basova",
+                            "bottom_line": "Muzi\u010dki klub (The Bottom Line)",
+                            "cellar_club": "Podrumski klub",
+                            "chamber": "Komora",
+                            "concert": "Koncert u\u017eivo",
+                            "disco": "Disko",
+                            "drama": "Drama",
+                            "enhanced": "Pobolj\u0161ano",
+                            "frankfurt": "Frankfurtska dvorana",
+                            "freiburg": "Crkva u Frajburgu",
+                            "game": "Igre",
+                            "jazz_club": "D\u017eez klub",
+                            "mono_movie": "Mono film",
+                            "movie": "Film",
+                            "munich": "Minhenska dvorana",
+                            "munich_a": "Minhenska dvorana A",
+                            "munich_b": "Minhenska dvorana B",
+                            "music": "Muzika",
+                            "music_video": "Muzi\u010dki video",
+                            "my_surround": "Moj surround",
+                            "off": "Isklju\u010deno",
+                            "pavilion": "Paviljon",
+                            "recital_opera": "Recital i opera",
+                            "roleplaying_game": "RPG igra",
+                            "roxy_theatre": "Muzi\u010dki klub (The Roxy)",
+                            "royaumont": "Crkva u Roajamonu",
+                            "sci-fi": "Nau\u010dna fantastika",
+                            "spectacle": "Filmski spektakl",
+                            "sports": "Sport",
+                            "standard": "Standardni",
+                            "stereo": "Stereo",
+                            "straight": "Izvorni zvuk",
+                            "stuttgart": "\u0160tutgartska dvorana",
+                            "surr_decoder": "Surround dekoder",
+                            "talk_show": "Dijalog",
+                            "target": "Odredi\u0161te",
+                            "tokyo": "Crkva u Tokiju",
+                            "tv_program": "TV program",
+                            "usa_a": "Dvorana u SAD-u A",
+                            "usa_b": "Dvorana u SAD-u B",
+                            "vienna": "Be\u010dka dvorana",
+                            "village_gate": "Koncertna dvorana (Village Gate)",
+                            "village_vanguard": "D\u017eez klub (Village Vanguard)",
+                            "warehouse_loft": "Industrijski loft"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "Niski tonovi"
+            },
+            "dialogue_level": {
+                "name": "Nivo dijaloga"
+            },
+            "dialogue_lift": {
+                "name": "Isticanje dijaloga"
+            },
+            "dts_dialogue_control": {
+                "name": "Kontrola dijaloga (DTS)"
+            },
+            "equalizer_high": {
+                "name": "Ekvilajzer: Visoki"
+            },
+            "equalizer_low": {
+                "name": "Ekvilajzer: Niski"
+            },
+            "equalizer_mid": {
+                "name": "Ekvilajzer: Srednji"
+            },
+            "subwoofer_volume": {
+                "name": "Ja\u010dina subvufera"
+            },
+            "treble": {
+                "name": "Visoki tonovi"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "Dimer",
+                "state": {
+                    "auto": "Automatski"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Re\u017eim ekvilajzera",
+                "state": {
+                    "auto": "Automatski",
+                    "bypass": "Premo\u0161\u0107eno",
+                    "manual": "Ru\u010dno"
+                }
+            },
+            "link_audio_delay": {
+                "name": "Ka\u0161njenje zvuka",
+                "state": {
+                    "audio_sync": "Sinhronizacija zvuka",
+                    "audio_sync_off": "Sinhronizacija zvuka isklju\u010dena",
+                    "audio_sync_on": "Sinhronizacija zvuka uklju\u010dena",
+                    "balanced": "Balansirano",
+                    "lip_sync": "Sinhronizacija usana"
+                }
+            },
+            "link_audio_quality": {
+                "name": "Kvalitet audio veze",
+                "state": {
+                    "compressed": "Kompresovano",
+                    "uncompressed": "Nekompresovano"
+                }
+            },
+            "link_control": {
+                "name": "Kontrola veze",
+                "state": {
+                    "speed": "Brzina",
+                    "stability": "Stabilnost",
+                    "standard": "Standardno"
+                }
+            },
+            "sleep": {
+                "name": "Tajmer za spavanje",
+                "state": {
+                    "0": "Isklju\u010deno",
+                    "120": "120 minuta",
+                    "30": "30 minuta",
+                    "60": "60 minuta",
+                    "90": "90 minuta"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Tip surround dekodera",
+                "state": {
+                    "auto": "Automatski",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x Igre",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x Film",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x Muzika",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 Bioskop",
+                    "dts_neo6_music": "DTS Neo:6 Muzika",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "Promena stanja"
+                }
+            },
+            "tone_control_mode": {
+                "name": "Kontrola boje tona",
+                "state": {
+                    "auto": "Automatski",
+                    "bypass": "Premo\u0161\u0107eno",
+                    "manual": "Ru\u010dno"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "Adaptivna kontrola dinamike"
+            },
+            "bass_extension": {
+                "name": "Pro\u0161irenje niskih tonova"
+            },
+            "clear_voice": {
+                "name": "Jasni glasovi"
+            },
+            "enhancer": {
+                "name": "Pro\u0161irenje zvuka"
+            },
+            "extra_bass": {
+                "name": "Dodatni bas"
+            },
+            "party_mode": {
+                "name": "Re\u017eim \u017eurke"
+            },
+            "pure_direct": {
+                "name": "Direktan re\u017eim"
+            },
+            "speaker_a": {
+                "name": "Zvu\u010dnik A"
+            },
+            "speaker_b": {
+                "name": "Zvu\u010dnik B"
+            },
+            "surround_3d": {
+                "name": "Surround 3D"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "Naziv mre\u017ee"
+            }
+        }
+    },
+    "exceptions": {
+        "app_not_running": {
+            "message": "Aplikacija {app} jo\u0161 uvek nije pokrenuta."
+        },
+        "dashboard_display_not_available": {
+            "message": "Ekran {display} nije dostupan."
+        },
+        "dashboard_invalid_media_type": {
+            "message": "Ekrani kontrolne table prihvataju samo tip medijskog sadr\u017eaja {expected}, a dobijen je {media_type}."
+        },
+        "dashboard_media_not_found": {
+            "message": "Medij {media_content_id} nije prona\u0111en."
+        },
+        "dashboard_now_playing_requires_player": {
+            "message": "Kontrolna tabla {dashboard} zahteva plejer, o\u010dekuje se {expected}."
+        },
+        "dashboard_player_not_available": {
+            "message": "Plejer {player_id} je nepoznat ili nije dostupan Home Assistant-u."
+        },
+        "dashboard_type_not_supported": {
+            "message": "Ekran {display} ne podr\u017eava kontrolnu tablu {dashboard}, o\u010dekuje se jedna od slede\u0107ih: {valid_ids}."
+        },
+        "dashboard_unknown_type": {
+            "message": "Kontrolna tabla {dashboard} je nepoznata, o\u010dekuje se jedna od slede\u0107ih: {valid_ids}."
+        },
+        "invalid_username": {
+            "message": "Korisni\u010dko ime {username} ne postoji na Music Assistant serveru."
+        },
+        "tts_entity_not_available": {
+            "message": "Entitet za pretvaranje teksta u govor {entity_id} nije dostupan."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "Proverite da li postoje dostupna a\u017euriranja za Music Assistant server i/ili integraciju",
+            "title": "Verzija Music Assistant servera nije ispravna"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "Album",
+                "compilation": "Kompilacija",
+                "ep": "EP",
+                "single": "Singl",
+                "unknown": "Nepoznato"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "Dodaj u listu \u010dekanja",
+                "next": "Pusti slede\u0107e",
+                "play": "Pusti",
+                "replace": "Pusti odmah i isprazni listu \u010dekanja",
+                "replace_next": "Pusti slede\u0107e i isprazni listu \u010dekanja"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "Album",
+                "artist": "Izvo\u0111a\u010d",
+                "audiobook": "Audio knjiga",
+                "folder": "Fascikla",
+                "playlist": "Plejlista",
+                "podcast": "Podkast",
+                "radio": "Radio",
+                "track": "Numera"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "Naziv izvo\u0111a\u010da",
+                "artist_name_desc": "Naziv izvo\u0111a\u010da (opadaju\u0107e)",
+                "last_played": "Poslednje reprodukovano",
+                "last_played_desc": "Poslednje reprodukovano (opadaju\u0107e)",
+                "name": "Naziv",
+                "name_desc": "Naziv (opadaju\u0107e)",
+                "play_count": "Broj pu\u0161tanja",
+                "play_count_desc": "Broj pu\u0161tanja (opadaju\u0107e)",
+                "position": "Polo\u017eaj",
+                "position_desc": "Polo\u017eaj (opadaju\u0107e)",
+                "random": "Nasumi\u010dno",
+                "random_play_count": "Nasumi\u010dno + najmanje pu\u0161tano",
+                "sort_name": "Sortiranje po nazivu",
+                "sort_name_desc": "Naziv za sortiranje (opadaju\u0107e)",
+                "timestamp_added": "Dodato",
+                "timestamp_added_desc": "Dodato (opadaju\u0107e)",
+                "year": "Godina",
+                "year_desc": "Godina (opadaju\u0107e)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "Preuzima stavke iz Music Assistant biblioteke.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Vratite samo izvo\u0111a\u010de albuma prilikom izlistavanja stavki iz biblioteke izvo\u0111a\u010da.",
+                    "name": "Omogu\u0107ite filter za izvo\u0111a\u010de albuma (samo za biblioteku izvo\u0111a\u010da)."
+                },
+                "album_type": {
+                    "description": "Filtriraj albume po tipu.",
+                    "name": "Filter tipa albuma (samo za biblioteku albuma)"
+                },
+                "config_entry_id": {
+                    "description": "Izaberite Music Assistant instancu na kojoj \u017eelite da izvr\u0161ite pretragu.",
+                    "name": "Instanca Music Assistant\u2011a"
+                },
+                "favorite": {
+                    "description": "Filtriraj prema statusu omiljenog. Omogu\u0107i da vrati samo stavke koje su ti se svidele, onemogu\u0107i da vrati samo stavke koje ti se nisu svidele ili ostavi polje prazno da vrati sve stavke.",
+                    "name": "Status omiljenog"
+                },
+                "limit": {
+                    "description": "Maksimalan broj stavki za prikaz.",
+                    "name": "Ograni\u010denje"
+                },
+                "media_type": {
+                    "description": "Tip medija za koji se zahtevaju detalji.",
+                    "name": "Tip medija"
+                },
+                "offset": {
+                    "description": "Pozicija (pomak) od koje lista po\u010dinje.",
+                    "name": "Pomak"
+                },
+                "order_by": {
+                    "description": "Sortirajte listu prema ovom polju.",
+                    "name": "Sortiraj po"
+                },
+                "search": {
+                    "description": "Opcioni niz znakova za pretragu ove biblioteke.",
+                    "name": "Pretra\u017eite"
+                },
+                "username": {
+                    "description": "Korisni\u010dko ime za Music Assistant koje se koristi za ovaj zahtev. Navo\u0111enje korisni\u010dkog imena \u0107e uzeti u obzir pode\u0161ene filtere provajdera za tog korisnika.",
+                    "name": "Korisni\u010dko ime"
+                }
+            },
+            "name": "Preuzmi stavke iz biblioteke",
+            "sections": {
+                "pagination": {
+                    "name": "Strani\u010denje"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "Preuzima detalje o trenutno aktivnom redu \u010dekanja na plejeru.",
+            "name": "Preuzmi detalje reda za reprodukciju"
+        },
+        "play_announcement": {
+            "description": "Emituje obave\u0161tenje na plejeru uz napredne opcije kontrole.",
+            "fields": {
+                "announce_volume": {
+                    "description": "Koristite fiksnu ja\u010dinu zvuka za obave\u0161tenje. Izostavite da biste koristili podrazumevanu vrednost plejera.",
+                    "name": "Ja\u010dina zvuka obave\u0161tenja"
+                },
+                "message": {
+                    "description": "Tekst za najavu koji izgovara izabrani TTS entitet. Unesite ili poruku ili URL adresu.",
+                    "name": "Poruka"
+                },
+                "pre_announce_url": {
+                    "description": "URL zvu\u010dnoe datoteke za pred-najavu.",
+                    "name": "URL adresa za zvuk pre obave\u0161tenja"
+                },
+                "tts_entity_id": {
+                    "description": "Entitet za pretvaranje teksta u govor koji izgovara poruku. Obavezno kada se navodi poruka.",
+                    "name": "TTS entitet"
+                },
+                "url": {
+                    "description": "URL do zvu\u010dne datoteke obave\u0161tenja. Unesite ili poruku ili URL.",
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Koristite zvuk pred-najave pre samog obave\u0161tenja. Izostavite za podrazumevani zvuk plejera.",
+                    "name": "Koristite pred-najavu"
+                }
+            },
+            "name": "Reprodukuj obave\u0161tenje"
+        },
+        "play_media": {
+            "description": "Reprodukuje medijski sadr\u017eaj na Music Assistant plejeru uz preciznije opcije kontrole.",
+            "fields": {
+                "album": {
+                    "description": "Kada navodite naziv pesme u polju Media ID, mo\u017eete opciono ograni\u010diti rezultate prema ovom nazivu albuma.",
+                    "name": "Naziv albuma"
+                },
+                "artist": {
+                    "description": "Kada navodite naziv pesme ili albuma u polju Media ID, mo\u017eete opciono ograni\u010diti rezultate prema ovom nazivu izvo\u0111a\u010da.",
+                    "name": "Naziv izvo\u0111a\u010da"
+                },
+                "enqueue": {
+                    "description": "Da li sadr\u017eaj treba da se pusti odmah ili da se doda u red za \u010dekanje.",
+                    "name": "Dodavanje u red"
+                },
+                "media_id": {
+                    "description": "URI ili naziv stavke koju \u017eelite da pustite. Navedite listu ako \u017eelite da reprodukujete/dodate u red vi\u0161e stavki.",
+                    "name": "ID medija"
+                },
+                "media_type": {
+                    "description": "Tip sadr\u017eaja za reprodukciju. Kao \u0161to su izvo\u0111a\u010d, album, numera ili lista pesama. Bi\u0107e automatski odre\u0111en ako se izostavi.",
+                    "name": "Tip medija"
+                },
+                "radio_mode": {
+                    "description": "Omogu\u0107ite radio re\u017eim za automatsko generisanje liste pesama na osnovu izbora.",
+                    "name": "Omogu\u0107i radio re\u017eim"
+                },
+                "start_item": {
+                    "description": "Stavka od koje zapo\u010dinje reprodukcija, umesto od prve. Koristite latest da biste pustili najnoviju epizodu podkasta, ili unesite URI, ID ili deo naziva (najmanje 3 znaka) numere ili epizode od koje \u017eelite da po\u010dnete.",
+                    "name": "Po\u010detna stavka"
+                },
+                "username": {
+                    "description": "Korisni\u010dko ime za Music Assistant koje se koristi za zahtev za reprodukciju medija. Ovo uti\u010de na unos u dnevnik reprodukcije i uzima u obzir filtere pru\u017ealaca usluga za tog korisnika. Podrazumevano se koristi Music Assistant korisnik koji je povezan sa Home Assistant korisnikom koji \u0161alje zahtev. Ako nema povezanog korisnika, zahtev se izvr\u0161ava preko podrazumevanog naloga.",
+                    "name": "Korisni\u010dko ime"
+                }
+            },
+            "name": "Reprodukuj medijski sadr\u017ea"
+        },
+        "search": {
+            "description": "Vr\u0161i globalnu pretragu muzi\u010dke biblioteke i svih povezanih izvora.",
+            "fields": {
+                "album": {
+                    "description": "Kada navodite naziv pesme u polju Naziv, mo\u017eete opciono ograni\u010diti rezultate prema ovom nazivu albuma.",
+                    "name": "Naziv albuma"
+                },
+                "artist": {
+                    "description": "Kada navodite naziv pesme ili albuma u polju za ime, mo\u017eete opciono ograni\u010diti rezultate prema ovom nazivu izvo\u0111a\u010da.",
+                    "name": "Naziv izvo\u0111a\u010da"
+                },
+                "config_entry_id": {
+                    "description": "Izaberite Music Assistant instancu na kojoj \u017eelite da izvr\u0161ite pretragu.",
+                    "name": "Instanca Music Assistant\u2011a"
+                },
+                "library_only": {
+                    "description": "Uklju\u010dite samo rezultate koji se nalaze u biblioteci.",
+                    "name": "Samo stavke iz biblioteke"
+                },
+                "limit": {
+                    "description": "Maksimalan broj stavki za prikaz (po tipu medija).",
+                    "name": "Ograni\u010denje"
+                },
+                "media_type": {
+                    "description": "Tip sadr\u017eaja za pretragu. Kao \u0161to su izvo\u0111a\u010d (artist), album, pesma (track), radio ili lista pesama. Svi tipovi ako se izostavi.",
+                    "name": "Tipovi medija"
+                },
+                "name": {
+                    "description": "Ime ili naslov za pretragu.",
+                    "name": "Naziv za pretragu"
+                },
+                "username": {
+                    "description": "Korisni\u010dko ime za Music Assistant koje se koristi za pretragu. Pretrage po\u0161tuju pode\u0161ene filtere pru\u017ealaca usluga za tog korisnika. Podrazumevano se koristi Music Assistant korisnik koji je povezan sa Home Assistant korisnikom koji \u0161alje zahtev. Ako nema povezanog korisnika, zahtev se izvr\u0161ava preko podrazumevanog naloga.",
+                    "name": "Korisni\u010dko ime"
+                }
+            },
+            "name": "Pretra\u017ei Music Assistant",
+            "sections": {
+                "search_options": {
+                    "name": "Opcije pretrage"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "Prebacuje red \u010dekanja sa jednog plejera na drugi.",
+            "fields": {
+                "auto_play": {
+                    "description": "Pokrenite reprodukciju reda na ciljnom plejeru. Izostavite za podrazumevano pona\u0161anje.",
+                    "name": "Automatska reprodukcija"
+                },
+                "source_player": {
+                    "description": "Izvorni medija plejer koji sadr\u017ei red \u010dekanja (queue) koji \u017eelite da prenesete. Ako se izostavi, koristi\u0107e se prvi plejer koji trenutno reprodukuje sadr\u017eaj.",
+                    "name": "Izvor media plejera"
+                }
+            },
+            "name": "Prenesi red za reprodukciju"
+        }
+    }
+}

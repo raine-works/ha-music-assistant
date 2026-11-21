@@ -1,0 +1,8 @@
+Music Assistant (custom integration), from raine-works
+
+This is a fork of Home Assistant's built-in Music Assistant integration
+(homeassistant/components/music_assistant) and its tests (tests/components/music_assistant),
+Copyright the Home Assistant authors, licensed under the Apache License, Version 2.0, from
+https://github.com/home-assistant/core. The release it follows is UPSTREAM's.
+
+Changes from it are listed in CHANGELOG.md and are under the same license.

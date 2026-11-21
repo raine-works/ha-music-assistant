@@ -1,0 +1,567 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas",
+            "already_in_progress": "Tai jau konfig\u016bruojama. Prie\u0161 prad\u0117dami i\u0161 naujo, u\u017ebaikite esam\u0105 konfig\u016bracij\u0105.",
+            "app_get_discovery_info_failed": "Nepavyko gauti Music Assistant program\u0117l\u0117s aptikimo informacijos.",
+            "app_info_failed": "Nepavyko gauti informacijos apie program\u0117l\u0119 Music Assistant.",
+            "app_install_failed": "Nepavyko \u012fdiegti program\u0117l\u0117s Music Assistant.",
+            "app_start_failed": "Nepavyko paleisti program\u0117l\u0117s Music Assistant.",
+            "auth_error": "Autentifikavimo klaida, bandykite dar kart\u0105",
+            "auth_failed": "Autentifikavimas nepavyko, bandykite dar kart\u0105",
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_server_version": "Music Assistant serverio versija netinkama.",
+            "no_url_available": "N\u0117ra URL. Nor\u0117dami gauti informacijos apie \u0161i\u0105 klaid\u0105, [\u017er. pagalbos skyri\u0173]({docs_url})",
+            "unique_id_mismatch": "Pateiktas URL priklauso kitam Music Assistant serveriui.",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "error": {
+            "auth_failed": "Autentifikavimas nepavyko, bandykite dar kart\u0105",
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_server_version": "Music Assistant serverio versija netinkama.",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "progress": {
+            "install_app": "Palaukite, kol bus baigta diegti Music Assistant program\u0117l\u0119. Tai gali u\u017etrukti kelias minutes.",
+            "start_app": "Palaukite, kol bus paleista program\u0117l\u0117 Music Assistant. Tai gali u\u017etrukti kelias sekundes."
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Ilgalaikis prieigos raktas"
+                },
+                "data_description": {
+                    "token": "Music Assistant serverio nustatymuose sukurkite ilgalaik\u012f prieigos rakt\u0105 ir \u012fklijuokite j\u012f \u010dia."
+                },
+                "title": "\u012eveskite ilgalaik\u012f prieigos rakt\u0105"
+            },
+            "discovery_confirm": {
+                "description": "Ar norite prid\u0117ti Music Assistant server\u012f  ' {url}' prie Home Assistant?",
+                "title": "Atrastas Music Assistant serveris"
+            },
+            "hassio_confirm": {
+                "description": "Ar norite prid\u0117ti Music Assistant server\u012f prie Home Assistant?",
+                "title": "Atrasta Music Assistant program\u0117l\u0117"
+            },
+            "install_app": {
+                "title": "Program\u0117l\u0117s diegimas prad\u0117tas"
+            },
+            "manual": {
+                "data": {
+                    "url": "URL"
+                },
+                "data_description": {
+                    "url": "Music Assistant serverio URL adresas"
+                }
+            },
+            "on_supervisor": {
+                "data": {
+                    "use_app": "Naudokite oficiali\u0105 Music Assistant program\u0117l\u0119"
+                },
+                "data_description": {
+                    "use_app": "Home Assistant \u012fdiegia ir paleid\u017eia program\u0117l\u0119 u\u017e jus, jei reikia."
+                },
+                "description": "Ar norite naudoti oficiali\u0105 Music Assistant program\u0117l\u0119?\n\nJei Music Assistant jau naudojate kitoje programoje, pasirinktiniame konteineryje, vietoje ir pan., \u0161ios parinkties nesirinkite.",
+                "title": "Pasirinkite ry\u0161io b\u016bd\u0105"
+            },
+            "onboarding": {
+                "description": "Atidarykite Music Assistant ir u\u017ebaikite pradin\u0119 s\u0105rank\u0105. Home Assistant automati\u0161kai t\u0119s darb\u0105, kai s\u0105ranka bus baigta.",
+                "title": "U\u017ebaigti Music Assistant nustatym\u0105"
+            },
+            "reauth_confirm": {
+                "description": "Music Assistant serverio autentifikavimo prieigos raktas.{url}` nebegalioja. Nor\u0117dami toliau naudotis integracija, i\u0161 naujo autentifikuokite save.",
+                "title": "Reikalingas pakartotinis autentifikavimas"
+            },
+            "reconfigure": {
+                "data": {
+                    "url": "URL"
+                },
+                "data_description": {
+                    "url": "Music Assistant serverio URL adresas"
+                }
+            },
+            "start_app": {
+                "title": "Paleid\u017eiama program\u0117l\u0117"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "M\u0117gstamiausia dabartin\u0117 daina"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "11 kanal\u0173 stereo",
+                            "2ch_stereo": "2 kanal\u0173 stereo",
+                            "5ch_stereo": "5 kanal\u0173 stereo",
+                            "7ch_stereo": "7 kanal\u0173 stereo",
+                            "9ch_stereo": "9 kanal\u0173 stereo",
+                            "action_game": "Veiksmo \u017eaidimas",
+                            "adventure": "Nuotykis",
+                            "all_ch_stereo": "Visi ch stereo",
+                            "amsterdam": "Sal\u0117 Amsterdame",
+                            "arena": "Arena",
+                            "bass_booster": "Bos\u0173 stiprintuvas",
+                            "bottom_line": "Apatin\u0117 linija",
+                            "cellar_club": "R\u016bsio klubas",
+                            "chamber": "R\u016bmai",
+                            "concert": "Gyvas koncertas",
+                            "disco": "Disko",
+                            "drama": "Drama",
+                            "enhanced": "Patobulintas",
+                            "frankfurt": "Sal\u0117 Frankfurte",
+                            "freiburg": "Ba\u017eny\u010dia Freiburge",
+                            "game": "\u017daidimas",
+                            "jazz_club": "D\u017eiazo klubas",
+                            "mono_movie": "Mono filmas",
+                            "movie": "Filmas",
+                            "munich": "Sal\u0117 Miunchene",
+                            "munich_a": "Sal\u0117 Miunchene A",
+                            "munich_b": "Sal\u0117 Miunchene B",
+                            "music": "Muzika",
+                            "music_video": "Muzikinis vaizdo klipas",
+                            "my_surround": "Mano erdvinis",
+                            "off": "I\u0161jungta",
+                            "pavilion": "Paviljonas",
+                            "recital_opera": "Re\u010ditalis / opera",
+                            "roleplaying_game": "Vaidmen\u0173 \u017eaidimas",
+                            "roxy_theatre": "Roxy teatras",
+                            "royaumont": "Ba\u017eny\u010dia Royaumont mieste",
+                            "sci-fi": "Mokslin\u0117 fantastika",
+                            "spectacle": "Spektaklis",
+                            "sports": "Sportas",
+                            "standard": "Standartinis",
+                            "stereo": "Stereofoninis",
+                            "straight": "Tiesiai",
+                            "stuttgart": "Sal\u0117 \u0160tutgarte",
+                            "surr_decoder": "Erdvinio garso dekoderis",
+                            "talk_show": "Pokalbi\u0173 laida",
+                            "target": "Tikslas",
+                            "tokyo": "Ba\u017eny\u010dia Tokijuje",
+                            "tv_program": "TV programa",
+                            "usa_a": "Sal\u0117 JAV A",
+                            "usa_b": "Sal\u0117 JAV B",
+                            "vienna": "Sal\u0117 Vienoje",
+                            "village_gate": "Kaimo vartai",
+                            "village_vanguard": "Kaimo avangardas",
+                            "warehouse_loft": "Sand\u0117lio pal\u0117p\u0117"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "Bosas"
+            },
+            "dialogue_level": {
+                "name": "Dialogo lygis"
+            },
+            "dialogue_lift": {
+                "name": "Dialogo pak\u0117limas"
+            },
+            "dts_dialogue_control": {
+                "name": "DTS dialogo valdymas"
+            },
+            "equalizer_high": {
+                "name": "Auk\u0161tas ekvalaizerio lygis"
+            },
+            "equalizer_low": {
+                "name": "\u017demas ekvalaizeris"
+            },
+            "equalizer_mid": {
+                "name": "Vidutinio da\u017enio ekvalaizeris"
+            },
+            "subwoofer_volume": {
+                "name": "\u017dem\u0173j\u0173 da\u017eni\u0173 garsiakalbio garsumas"
+            },
+            "treble": {
+                "name": "Auk\u0161tas da\u017enis"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "Pritemdymas",
+                "state": {
+                    "auto": "Automatinis"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Ekvalaizerio re\u017eimas",
+                "state": {
+                    "auto": "Automatinis",
+                    "bypass": "Apeiti",
+                    "manual": "Rankinis"
+                }
+            },
+            "link_audio_delay": {
+                "name": "Garso ry\u0161io v\u0117lavimas",
+                "state": {
+                    "audio_sync": "Garso sinchronizavimas",
+                    "audio_sync_off": "Garso sinchronizavimas i\u0161jungtas",
+                    "audio_sync_on": "Garso sinchronizavimas \u012fjungtas",
+                    "balanced": "Subalansuotas",
+                    "lip_sync": "L\u016bp\u0173 sinchronizavimas"
+                }
+            },
+            "link_audio_quality": {
+                "name": "Nuorodos garso kokyb\u0117",
+                "state": {
+                    "compressed": "Suspaustas",
+                    "uncompressed": "Nesuspaustas"
+                }
+            },
+            "link_control": {
+                "name": "Ry\u0161io valdymas",
+                "state": {
+                    "speed": "Greitis",
+                    "stability": "Stabilumas",
+                    "standard": "Standartinis"
+                }
+            },
+            "sleep": {
+                "name": "Miego laikmatis",
+                "state": {
+                    "0": "I\u0161jungta",
+                    "120": "120 minu\u010di\u0173",
+                    "30": "30 minu\u010di\u0173",
+                    "60": "60 minu\u010di\u0173",
+                    "90": "90 minu\u010di\u0173"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Erdvinio garso dekoderio tipas",
+                "state": {
+                    "auto": "Automatinis",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x \u017eaidimas",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x filmas",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x muzika",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 kinas",
+                    "dts_neo6_music": "DTS Neo:6 muzika",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "Perjungti"
+                }
+            },
+            "tone_control_mode": {
+                "name": "Ton\u0173 valdymo re\u017eimas",
+                "state": {
+                    "auto": "Automatinis",
+                    "bypass": "Apeiti",
+                    "manual": "Rankinis"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "Adaptyvusis DRC"
+            },
+            "bass_extension": {
+                "name": "Boso prat\u0119simas"
+            },
+            "clear_voice": {
+                "name": "Ai\u0161kus balsas"
+            },
+            "enhancer": {
+                "name": "Stiprintuvas"
+            },
+            "extra_bass": {
+                "name": "Papildomas bosas"
+            },
+            "party_mode": {
+                "name": "Vakar\u0117lio re\u017eimas"
+            },
+            "pure_direct": {
+                "name": "Grynas tiesioginis"
+            },
+            "speaker_a": {
+                "name": "Kalb\u0117tojas A"
+            },
+            "speaker_b": {
+                "name": "Garsiakalbis B"
+            },
+            "surround_3d": {
+                "name": "Erdvinis 3D garsas"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "Tinklo pavadinimas"
+            }
+        }
+    },
+    "exceptions": {
+        "app_not_running": {
+            "message": "The {app} program\u0117l\u0117 dar neveikia."
+        },
+        "dashboard_display_not_available": {
+            "message": "Ekranas {display} n\u0117ra prieinamas."
+        },
+        "dashboard_invalid_media_type": {
+            "message": "Prietais\u0173 skydelio ekranai priima tik medijos turinio tip\u0105 {expected}, gavo {media_type}."
+        },
+        "dashboard_media_not_found": {
+            "message": "\u017diniasklaida {media_content_id} nebuvo rastas."
+        },
+        "dashboard_now_playing_requires_player": {
+            "message": "Prietais\u0173 skydelis {dashboard} reikalauja \u017eaid\u0117jo, tikimasi {expected}."
+        },
+        "dashboard_player_not_available": {
+            "message": "\u017daid\u0117jas {player_id} ne\u017einomas arba nesusij\u0119s su Home Assistant."
+        },
+        "dashboard_type_not_supported": {
+            "message": "Ekranas {display} nepalaiko prietais\u0173 skydelio {dashboard}, tik\u0117josi vieno i\u0161: {valid_ids}."
+        },
+        "dashboard_unknown_type": {
+            "message": "Prietais\u0173 skydelis {dashboard} ne\u017einoma, tikimasi vieno i\u0161 \u0161i\u0173: {valid_ids}."
+        },
+        "invalid_username": {
+            "message": "Vartotojo vardas {username} Music Assistant serveryje n\u0117ra."
+        },
+        "tts_entity_not_available": {
+            "message": "Teksto \u012f kalb\u0105 subjektas {entity_id} n\u0117ra prieinamas."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "Patikrinkite, ar yra Music Assistant serverio ir (arba) integracijos naujinim\u0173.",
+            "title": "\u201eMusic Assistant\u201c serverio versija n\u0117ra tinkama"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "Albumas",
+                "compilation": "Kompiliacija",
+                "ep": "EP",
+                "single": "Vienas",
+                "unknown": "Ne\u017einoma"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "Prid\u0117ti \u012f eil\u0119",
+                "next": "Groti toliau",
+                "play": "Groti",
+                "replace": "Groti dabar ir i\u0161valykite eil\u0119",
+                "replace_next": "Groti kit\u0105 ir i\u0161valyti eil\u0119"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "Albumas",
+                "artist": "Atlik\u0117jas",
+                "audiobook": "Audioknyga",
+                "folder": "Aplankas",
+                "playlist": "Grojara\u0161tis",
+                "podcast": "Podcast'as",
+                "radio": "Radijas",
+                "track": "Trasa"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "Atlik\u0117jo vardas",
+                "artist_name_desc": "Atlik\u0117jo vardas (ma\u017e\u0117ja)",
+                "last_played": "Paskutin\u012f kart\u0105 leista",
+                "last_played_desc": "Paskutin\u012f kart\u0105 leista (ma\u017e\u0117ja)",
+                "name": "Pavadinimas",
+                "name_desc": "Pavadinimas (ma\u017e\u0117jimas)",
+                "play_count": "Paleidim\u0173 skai\u010dius",
+                "play_count_desc": "Paleidim\u0173 skai\u010dius (ma\u017e\u0117ja)",
+                "position": "Pozicija",
+                "position_desc": "Pozicija (ma\u017e\u0117jimas)",
+                "random": "Atsitiktinis",
+                "random_play_count": "Atsitiktinis + ma\u017eiausiai leid\u017eiamas",
+                "sort_name": "R\u016b\u0161iuoti pavadinim\u0105",
+                "sort_name_desc": "R\u016b\u0161iuoti pavadinim\u0105 (ma\u017e\u0117jantis)",
+                "timestamp_added": "Prid\u0117ta",
+                "timestamp_added_desc": "Prid\u0117ta (ma\u017e\u0117ja)",
+                "year": "Metai",
+                "year_desc": "Metai (ma\u017e\u0117jimas)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "Atgauna elementus i\u0161 Music Assistant bibliotekos.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Pateikdami atlik\u0117j\u0173 bibliotekos elementus, gr\u0105\u017einkite tik albumo atlik\u0117jus.",
+                    "name": "\u012egalinti albumo atlik\u0117j\u0173 filtr\u0105 (tik atlik\u0117j\u0173 bibliotekai)"
+                },
+                "album_type": {
+                    "description": "Filtruoti albumus pagal tip\u0105.",
+                    "name": "Albumo tipo filtras (tik album\u0173 bibliotekoje)"
+                },
+                "config_entry_id": {
+                    "description": "Pasirinkite Music Assistant egzempliori\u0173, kuriame norite atlikti paie\u0161k\u0105.",
+                    "name": "Muzikos asistento pavyzdys"
+                },
+                "limit": {
+                    "description": "Maksimalus gr\u0105\u017eintin\u0173 preki\u0173 skai\u010dius.",
+                    "name": "Apribojimas"
+                },
+                "media_type": {
+                    "description": "Medijos tipas, d\u0117l kurio reikia pra\u0161yti i\u0161samios informacijos.",
+                    "name": "Medijos tipas"
+                },
+                "offset": {
+                    "description": "Poslinkis, nuo kurio pradedamas s\u0105ra\u0161as.",
+                    "name": "U\u017eskaita"
+                },
+                "order_by": {
+                    "description": "R\u016b\u0161iuoti s\u0105ra\u0161\u0105 pagal \u0161\u012f lauk\u0105.",
+                    "name": "U\u017esakyti iki"
+                },
+                "search": {
+                    "description": "Pasirenkama paie\u0161kos eilut\u0117, norint ie\u0161koti \u0161ioje bibliotekoje.",
+                    "name": "Ie\u0161koti"
+                },
+                "username": {
+                    "description": "\u0160iai u\u017eklausai naudojamas Music Assistant vartotojo vardas. Pateikus vartotojo vard\u0105, bus atsi\u017evelgta \u012f vartotojo sukonfig\u016bruotus teik\u0117jo filtrus.",
+                    "name": "Vartotojo vardas"
+                }
+            },
+            "name": "Gaukite bibliotekos elementus",
+            "sections": {
+                "pagination": {
+                    "name": "Puslapi\u0173 \u017eym\u0117jimas"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "Gauna informacij\u0105 apie \u0161iuo metu aktyvi\u0105 Music Assistant grotuvo eil\u0119.",
+            "name": "Gaukite \u017eaid\u0117j\u0173 eil\u0117s informacij\u0105"
+        },
+        "play_announcement": {
+            "description": "Leid\u017eia prane\u0161im\u0105 Music Assistant grotuve su smulkesn\u0117mis valdymo parinktimis.",
+            "fields": {
+                "announce_volume": {
+                    "description": "Skelbimui naudokite priverstin\u012f garsumo lyg\u012f. Nenaudokite grotuvo numatytojo.",
+                    "name": "Paskelbkite garsum\u0105"
+                },
+                "message": {
+                    "description": "Skelbtinas tekstas, kur\u012f taria pasirinktas teksto \u012fgarsinimo objektas. Pateikite prane\u0161im\u0105 arba URL.",
+                    "name": "\u017dinut\u0117"
+                },
+                "pre_announce_url": {
+                    "description": "URL \u012f gars\u0105 prie\u0161 paskelbim\u0105.",
+                    "name": "I\u0161ankstinio prane\u0161imo URL"
+                },
+                "tts_entity_id": {
+                    "description": "Teksto \u012fgarsinimo objektas, kuris i\u0161taria prane\u0161im\u0105. B\u016btinas, kai pateikiamas prane\u0161imas.",
+                    "name": "Teksto \u012f kalb\u0105 konvertavimo objektas"
+                },
+                "url": {
+                    "description": "Prane\u0161imo garso URL. Pateikite prane\u0161im\u0105 arba URL.",
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Skelbimui naudokite i\u0161ankstinio prane\u0161imo gars\u0105. Nenaudokite numatyt\u0173j\u0173 grotuvo.",
+                    "name": "Naudokite i\u0161ankstin\u012f prane\u0161im\u0105"
+                }
+            },
+            "name": "Leisti i\u0161 anksto nustatyt\u0105"
+        },
+        "play_media": {
+            "description": "Atkuria medij\u0105 Music Assistant grotuve su smulkesn\u0117mis valdymo parinktimis.",
+            "fields": {
+                "album": {
+                    "description": "Nurodydami takel\u012f pagal pavadinim\u0105 lauke Media ID, galite pasirinktinai apriboti rezultatus pagal \u0161\u012f albumo pavadinim\u0105.",
+                    "name": "Albumo pavadinimas"
+                },
+                "artist": {
+                    "description": "Nurodydami takel\u012f ar album\u0105 pagal pavadinim\u0105 lauke Medijos ID, galite pasirinktinai apriboti rezultatus pagal \u0161\u012f atlik\u0117jo pavadinim\u0105.",
+                    "name": "Atlik\u0117jo vardas"
+                },
+                "enqueue": {
+                    "description": "Jei turinys tur\u0117t\u0173 b\u016bti paleistas dabar arba \u012ftrauktas \u012f eil\u0119.",
+                    "name": "Eil\u0117"
+                },
+                "media_id": {
+                    "description": "URI arba elemento, kur\u012f norite \u017eaisti, pavadinimas. Nurodykite s\u0105ra\u0161\u0105, jei norite paleisti / sud\u0117ti \u012f eil\u0119 kelis elementus.",
+                    "name": "Medijos ID"
+                },
+                "media_type": {
+                    "description": "Leid\u017eiamo turinio tipas. Pavyzd\u017eiui, atlik\u0117jas, albumas, takelis ar grojara\u0161tis. Bus automati\u0161kai nustatyta, jei praleista.",
+                    "name": "Medijos tipas"
+                },
+                "radio_mode": {
+                    "description": "\u012egalinkite radijo re\u017eim\u0105, kad pagal pasirinkim\u0105 b\u016bt\u0173 automati\u0161kai generuojamas grojara\u0161tis.",
+                    "name": "\u012ejungti radijo re\u017eim\u0105"
+                },
+                "start_item": {
+                    "description": "Elementas, nuo kurio norite prad\u0117ti atk\u016brim\u0105, o ne nuo pirmojo. Nor\u0117dami paleisti podcast'\u0105 nuo naujausio epizodo, naudokite 'naujausias' arba pateikite URI, ID arba pavadinimo dal\u012f (bent 3 simbolius) takelio ar epizodo, nuo kurio norite prad\u0117ti.",
+                    "name": "Pradinis elementas"
+                },
+                "username": {
+                    "name": "Vartotojo vardas"
+                }
+            },
+            "name": "Leisti medij\u0105"
+        },
+        "search": {
+            "description": "Atlieka visuotin\u0119 paie\u0161k\u0105 Music Assistant bibliotekoje ir visuose paslaug\u0173 teik\u0117juose.",
+            "fields": {
+                "album": {
+                    "description": "Nurodydami takelio pavadinim\u0105 pavadinimo lauke, galite pasirinktinai apriboti rezultatus pagal \u0161\u012f albumo pavadinim\u0105.",
+                    "name": "Albumo pavadinimas"
+                },
+                "artist": {
+                    "description": "Vardo lauke nurodydami takelio arba albumo pavadinim\u0105, galite pasirinktinai apriboti rezultatus pagal \u0161\u012f atlik\u0117jo pavadinim\u0105.",
+                    "name": "Atlik\u0117jo vardas"
+                },
+                "config_entry_id": {
+                    "description": "Pasirinkite Music Assistant egzempliori\u0173, kuriame norite atlikti paie\u0161k\u0105.",
+                    "name": "Muzikos asistento pavyzdys"
+                },
+                "library_only": {
+                    "description": "\u012etraukite tik tuos rezultatus, kurie yra bibliotekoje.",
+                    "name": "Tik bibliotekos daiktai"
+                },
+                "limit": {
+                    "description": "Maksimalus gr\u0105\u017eintin\u0173 element\u0173 skai\u010dius (kiekvienam laikmenos tipui).",
+                    "name": "Riba"
+                },
+                "media_type": {
+                    "description": "Ie\u0161komo turinio tipas. Pavyzd\u017eiui, atlik\u0117jas, albumas, takelis, radijas ar grojara\u0161tis. Visi tipai, jei praleista.",
+                    "name": "Medijos tipas (-ai)"
+                },
+                "name": {
+                    "description": "Vardas / pavadinimas, kurio reikia ie\u0161koti.",
+                    "name": "Paie\u0161kos pavadinimas"
+                },
+                "username": {
+                    "name": "Vartotojo vardas"
+                }
+            },
+            "name": "Ie\u0161kokite muzikos asistento",
+            "sections": {
+                "search_options": {
+                    "name": "Paie\u0161kos parinktys"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "Perkelia \u017eaid\u0117jo eil\u0119 kitam \u017eaid\u0117jui.",
+            "fields": {
+                "auto_play": {
+                    "description": "Prad\u0117kite \u017eaisti eil\u0119 tiksliniame grotuve. Nenaudokite numatytosios elgsenos.",
+                    "name": "Automatinis paleidimas"
+                },
+                "source_player": {
+                    "description": "\u0160altinio medijos grotuvas, kuriame yra norima perkelti eil\u0117. Jei nepateikiama, bus naudojamas pirmas grojantis grotuvas.",
+                    "name": "\u0160altinio medijos grotuvas"
+                }
+            },
+            "name": "Perdavimo eil\u0117"
+        }
+    }
+}

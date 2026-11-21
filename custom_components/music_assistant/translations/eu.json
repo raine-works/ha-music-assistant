@@ -1,0 +1,161 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Gailua dagoeneko konfiguratuta dago",
+            "already_in_progress": "Dagoeneko konfiguratuta dago. Berriro hasi baino lehen existitzen den konfigurazioarekin amaitu.",
+            "app_get_discovery_info_failed": "Music Assistant aplikazioaren aurkikuntza informazioa jasotzeak huts egin du.",
+            "app_info_failed": "Music Assistant aplikazioaren informazioa jasotzeak huts egin du.",
+            "app_install_failed": "Music Assistant aplikazioa instalatzeak huts egin du.",
+            "app_start_failed": "Music Assistant aplikazioa abiarazteak huts egin du.",
+            "cannot_connect": "Konexioak huts egin du",
+            "unknown": "Ustekabeko errorea"
+        },
+        "error": {
+            "cannot_connect": "Konexioak huts egin du",
+            "unknown": "Ustekabeko errorea"
+        },
+        "step": {
+            "manual": {
+                "data": {
+                    "url": "URL-a"
+                }
+            },
+            "reconfigure": {
+                "data": {
+                    "url": "URL-a"
+                }
+            }
+        }
+    },
+    "entity": {
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "movie": "Filma",
+                            "off": "Itzalita",
+                            "target": "Helburua"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "dimmer": {
+                "state": {
+                    "auto": "Automatikoa"
+                }
+            },
+            "equalizer_mode": {
+                "state": {
+                    "auto": "Automatikoa",
+                    "bypass": "Saihesbidea",
+                    "manual": "Eskuzkoa"
+                }
+            },
+            "link_audio_delay": {
+                "state": {
+                    "balanced": "Orekatua"
+                }
+            },
+            "link_control": {
+                "state": {
+                    "speed": "Abiadura"
+                }
+            },
+            "sleep": {
+                "state": {
+                    "0": "Itzalita",
+                    "120": "120 minutu",
+                    "30": "30 minutu",
+                    "60": "60 minutu",
+                    "90": "90 minutu"
+                }
+            },
+            "surround_decoder_type": {
+                "state": {
+                    "auto": "Automatikoa",
+                    "toggle": "Txandakatu"
+                }
+            },
+            "tone_control_mode": {
+                "state": {
+                    "auto": "Automatikoa",
+                    "manual": "Eskuzkoa"
+                }
+            }
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "unknown": "Ezezaguna"
+            }
+        },
+        "media_type": {
+            "options": {
+                "audiobook": "Audioliburua",
+                "folder": "Karpeta"
+            }
+        },
+        "order_by": {
+            "options": {
+                "name": "Izena",
+                "name_desc": "Izena (behera)",
+                "timestamp_added": "Gehituta",
+                "timestamp_added_desc": "Gehituta (behera)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "fields": {
+                "limit": {
+                    "name": "Muga"
+                },
+                "search": {
+                    "name": "Bilatu"
+                },
+                "username": {
+                    "name": "Erabiltzaile-izena"
+                }
+            }
+        },
+        "play_announcement": {
+            "fields": {
+                "announce_volume": {
+                    "name": "Iragarpen-bolumena"
+                },
+                "message": {
+                    "name": "Mezua"
+                },
+                "url": {
+                    "name": "URL-a"
+                }
+            }
+        },
+        "play_media": {
+            "fields": {
+                "username": {
+                    "name": "Erabiltzaile-izena"
+                }
+            }
+        },
+        "search": {
+            "fields": {
+                "limit": {
+                    "name": "Muga"
+                },
+                "username": {
+                    "name": "Erabiltzaile-izena"
+                }
+            },
+            "sections": {
+                "search_options": {
+                    "name": "Bilaketa aukerak"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,573 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "O dispositivo xa est\u00e1 configurado",
+            "already_in_progress": "Isto xa se est\u00e1 a configurar. Remata a configuraci\u00f3n existente antes de comezar de novo.",
+            "app_get_discovery_info_failed": "Erro ao obter a informaci\u00f3n de descubrimento da aplicaci\u00f3n Music Assistant.",
+            "app_info_failed": "Erro ao obter a informaci\u00f3n da aplicaci\u00f3n Music Assistant.",
+            "app_install_failed": "Erro ao instalar a aplicaci\u00f3n Music Assistant.",
+            "app_start_failed": "Erro ao iniciar a aplicaci\u00f3n Music Assistant.",
+            "auth_error": "Erro de autenticaci\u00f3n; t\u00e9ntao de novo",
+            "auth_failed": "Fallou a autenticaci\u00f3n; t\u00e9ntao de novo",
+            "cannot_connect": "Non se puido conectar",
+            "invalid_server_version": "O servidor de Music Assistant non ten a versi\u00f3n correcta",
+            "no_url_available": "Non hai ning\u00fan URL dispo\u00f1ible. Para obter informaci\u00f3n sobre este erro, [consulta a secci\u00f3n de axuda]({docs_url})",
+            "unique_id_mismatch": "O URL indicado pertence a outro servidor de Music Assistant.",
+            "unknown": "Erro inesperado"
+        },
+        "error": {
+            "auth_failed": "Fallou a autenticaci\u00f3n; t\u00e9ntao de novo",
+            "cannot_connect": "Non se puido conectar",
+            "invalid_server_version": "O servidor de Music Assistant non ten a versi\u00f3n correcta",
+            "unknown": "Erro inesperado"
+        },
+        "progress": {
+            "install_app": "Agarda mentres remata a instalaci\u00f3n da aplicaci\u00f3n Music Assistant. Pode levar varios minutos.",
+            "start_app": "Agarda mentres se inicia a aplicaci\u00f3n Music Assistant. Pode levar uns segundos."
+        },
+        "step": {
+            "auth_manual": {
+                "data": {
+                    "token": "Token de acceso de longa duraci\u00f3n"
+                },
+                "data_description": {
+                    "token": "Crea un token de acceso de longa duraci\u00f3n na configuraci\u00f3n do teu servidor Music Assistant e p\u00e9gao aqu\u00ed"
+                },
+                "title": "Introduce o token de acceso de longa duraci\u00f3n"
+            },
+            "discovery_confirm": {
+                "description": "Queres engadir o servidor Music Assistant `{url}` a Home Assistant?",
+                "title": "Descubriuse un servidor Music Assistant"
+            },
+            "hassio_confirm": {
+                "description": "Queres engadir o servidor Music Assistant a Home Assistant?",
+                "title": "Descubriuse a aplicaci\u00f3n Music Assistant"
+            },
+            "install_app": {
+                "title": "Comezou a instalaci\u00f3n da aplicaci\u00f3n"
+            },
+            "manual": {
+                "data": {
+                    "url": "URL"
+                },
+                "data_description": {
+                    "url": "URL do servidor de Music Assistant"
+                }
+            },
+            "on_supervisor": {
+                "data": {
+                    "use_app": "Usar a aplicaci\u00f3n oficial de Music Assistant"
+                },
+                "data_description": {
+                    "use_app": "Home Assistant instala e inicia a aplicaci\u00f3n por ti se \u00e9 necesario."
+                },
+                "description": "Queres usar a aplicaci\u00f3n oficial de Music Assistant?\n\nSe xa est\u00e1s a executar Music Assistant noutra aplicaci\u00f3n, nun contedor personalizado, de forma nativa etc., non selecciones esta opci\u00f3n.",
+                "title": "Seleccionar o m\u00e9todo de conexi\u00f3n"
+            },
+            "onboarding": {
+                "description": "Abre Music Assistant e remata a s\u00faa configuraci\u00f3n inicial. Home Assistant contin\u00faa automaticamente unha vez rematada a configuraci\u00f3n.",
+                "title": "Rematar a configuraci\u00f3n de Music Assistant"
+            },
+            "reauth_confirm": {
+                "description": "O token de autenticaci\u00f3n do servidor Music Assistant `{url}` xa non \u00e9 v\u00e1lido. Volve autenticarte para seguir usando a integraci\u00f3n.",
+                "title": "Requ\u00edrese a reautenticaci\u00f3n"
+            },
+            "reconfigure": {
+                "data": {
+                    "url": "URL"
+                },
+                "data_description": {
+                    "url": "URL do servidor de Music Assistant"
+                }
+            },
+            "start_app": {
+                "title": "Iniciando a aplicaci\u00f3n"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "favorite_now_playing": {
+                "name": "Marcar como favorita a canci\u00f3n actual"
+            }
+        },
+        "media_player": {
+            "media_player": {
+                "state_attributes": {
+                    "sound_mode": {
+                        "state": {
+                            "11ch_stereo": "Est\u00e9reo 11 canles",
+                            "2ch_stereo": "Est\u00e9reo 2 canles",
+                            "5ch_stereo": "Est\u00e9reo 5 canles",
+                            "7ch_stereo": "Est\u00e9reo 7 canles",
+                            "9ch_stereo": "Est\u00e9reo 9 canles",
+                            "action_game": "Xogo de acci\u00f3n",
+                            "adventure": "Aventura",
+                            "all_ch_stereo": "Est\u00e9reo todas as canles",
+                            "amsterdam": "Sala de \u00c1msterdam",
+                            "arena": "Estadio",
+                            "bass_booster": "Potenciador de graves",
+                            "bottom_line": "The Bottom Line",
+                            "cellar_club": "Club de soto",
+                            "chamber": "C\u00e1mara",
+                            "concert": "Concerto en directo",
+                            "disco": "Discoteca",
+                            "drama": "Drama",
+                            "enhanced": "Mellorado",
+                            "frankfurt": "Sala de Frankfurt",
+                            "freiburg": "Igrexa de Friburgo",
+                            "game": "Xogo",
+                            "jazz_club": "Club de jazz",
+                            "mono_movie": "Pel\u00edcula mono",
+                            "movie": "Pel\u00edcula",
+                            "munich": "Sala de M\u00fanic",
+                            "munich_a": "Sala de M\u00fanic A",
+                            "munich_b": "Sala de M\u00fanic B",
+                            "music": "M\u00fasica",
+                            "music_video": "V\u00eddeo musical",
+                            "my_surround": "O meu envolvente",
+                            "off": "Apagado",
+                            "pavilion": "Pavill\u00f3n",
+                            "recital_opera": "Recital/\u00f3pera",
+                            "roleplaying_game": "Xogo de rol",
+                            "roxy_theatre": "The Roxy Theatre",
+                            "royaumont": "Igrexa de Royaumont",
+                            "sci-fi": "Ciencia ficci\u00f3n",
+                            "spectacle": "Espect\u00e1culo",
+                            "sports": "Deportes",
+                            "standard": "Est\u00e1ndar",
+                            "stereo": "Est\u00e9reo",
+                            "straight": "Directo",
+                            "stuttgart": "Sala de Stuttgart",
+                            "surr_decoder": "Descodificador envolvente",
+                            "talk_show": "Programa de entrevistas",
+                            "target": "Destino",
+                            "tokyo": "Igrexa de Toquio",
+                            "tv_program": "Programa de TV",
+                            "usa_a": "Sala de EUA A",
+                            "usa_b": "Sala de EUA B",
+                            "vienna": "Sala de Viena",
+                            "village_gate": "Village Gate",
+                            "village_vanguard": "Village Vanguard",
+                            "warehouse_loft": "Almac\u00e9n loft"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "bass": {
+                "name": "Graves"
+            },
+            "dialogue_level": {
+                "name": "Nivel dos di\u00e1logos"
+            },
+            "dialogue_lift": {
+                "name": "Elevaci\u00f3n dos di\u00e1logos"
+            },
+            "dts_dialogue_control": {
+                "name": "Control de di\u00e1logos DTS"
+            },
+            "equalizer_high": {
+                "name": "Ecualizador alto"
+            },
+            "equalizer_low": {
+                "name": "Ecualizador baixo"
+            },
+            "equalizer_mid": {
+                "name": "Ecualizador medio"
+            },
+            "subwoofer_volume": {
+                "name": "Volume do subwoofer"
+            },
+            "treble": {
+                "name": "Agudos"
+            }
+        },
+        "select": {
+            "dimmer": {
+                "name": "Regulador de brillo",
+                "state": {
+                    "auto": "Autom\u00e1tico"
+                }
+            },
+            "equalizer_mode": {
+                "name": "Modo do ecualizador",
+                "state": {
+                    "auto": "Autom\u00e1tico",
+                    "bypass": "Derivaci\u00f3n",
+                    "manual": "Manual"
+                }
+            },
+            "link_audio_delay": {
+                "name": "Atraso do audio de ligaz\u00f3n",
+                "state": {
+                    "audio_sync": "Sincronizaci\u00f3n do audio",
+                    "audio_sync_off": "Sincronizaci\u00f3n do audio desactivada",
+                    "audio_sync_on": "Sincronizaci\u00f3n do audio activada",
+                    "balanced": "Equilibrado",
+                    "lip_sync": "Sincronizaci\u00f3n labial"
+                }
+            },
+            "link_audio_quality": {
+                "name": "Calidade do audio de ligaz\u00f3n",
+                "state": {
+                    "compressed": "Comprimido",
+                    "uncompressed": "Sen comprimir"
+                }
+            },
+            "link_control": {
+                "name": "Control de ligaz\u00f3n",
+                "state": {
+                    "speed": "Velocidade",
+                    "stability": "Estabilidade",
+                    "standard": "Est\u00e1ndar"
+                }
+            },
+            "sleep": {
+                "name": "Temporizador de apagado",
+                "state": {
+                    "0": "Apagado",
+                    "120": "120 minutos",
+                    "30": "30 minutos",
+                    "60": "60 minutos",
+                    "90": "90 minutos"
+                }
+            },
+            "surround_decoder_type": {
+                "name": "Tipo de descodificador envolvente",
+                "state": {
+                    "auto": "Autom\u00e1tico",
+                    "dolby_pl": "Dolby ProLogic",
+                    "dolby_pl2x_game": "Dolby ProLogic 2x Game",
+                    "dolby_pl2x_movie": "Dolby ProLogic 2x Movie",
+                    "dolby_pl2x_music": "Dolby ProLogic 2x Music",
+                    "dolby_surround": "Dolby Surround",
+                    "dts_neo6_cinema": "DTS Neo:6 Cinema",
+                    "dts_neo6_music": "DTS Neo:6 Music",
+                    "dts_neural_x": "DTS Neural:X",
+                    "toggle": "Alternar"
+                }
+            },
+            "tone_control_mode": {
+                "name": "Modo de control do ton",
+                "state": {
+                    "auto": "Autom\u00e1tico",
+                    "bypass": "Derivaci\u00f3n",
+                    "manual": "Manual"
+                }
+            }
+        },
+        "switch": {
+            "adaptive_drc": {
+                "name": "DRC adaptativo"
+            },
+            "bass_extension": {
+                "name": "Extensi\u00f3n de graves"
+            },
+            "clear_voice": {
+                "name": "Voz clara"
+            },
+            "enhancer": {
+                "name": "Potenciador"
+            },
+            "extra_bass": {
+                "name": "Graves extra"
+            },
+            "party_mode": {
+                "name": "Modo festa"
+            },
+            "pure_direct": {
+                "name": "Pure Direct"
+            },
+            "speaker_a": {
+                "name": "Altofalante A"
+            },
+            "speaker_b": {
+                "name": "Altofalante B"
+            },
+            "surround_3d": {
+                "name": "Envolvente 3D"
+            }
+        },
+        "text": {
+            "network_name": {
+                "name": "Nome da rede"
+            }
+        }
+    },
+    "exceptions": {
+        "app_not_running": {
+            "message": "A aplicaci\u00f3n {app} a\u00ednda non se est\u00e1 a executar."
+        },
+        "dashboard_display_not_available": {
+            "message": "A pantalla {display} non est\u00e1 dispo\u00f1ible."
+        },
+        "dashboard_invalid_media_type": {
+            "message": "As pantallas de panel s\u00f3 aceptan o tipo de contido {expected}; recibiuse {media_type}."
+        },
+        "dashboard_media_not_found": {
+            "message": "Non se atopou o contido {media_content_id}."
+        },
+        "dashboard_now_playing_requires_player": {
+            "message": "O panel {dashboard} necesita un reprodutor; agard\u00e1base {expected}."
+        },
+        "dashboard_player_not_available": {
+            "message": "O reprodutor {player_id} \u00e9 desco\u00f1ecido ou non est\u00e1 exposto a Home Assistant."
+        },
+        "dashboard_type_not_supported": {
+            "message": "A pantalla {display} non admite o panel {dashboard}; agard\u00e1base un de: {valid_ids}."
+        },
+        "dashboard_unknown_type": {
+            "message": "O panel {dashboard} \u00e9 desco\u00f1ecido; agard\u00e1base un de: {valid_ids}."
+        },
+        "invalid_username": {
+            "message": "O nome de usuario {username} non existe no servidor de Music Assistant."
+        },
+        "tts_entity_not_available": {
+            "message": "A entidade de texto a voz {entity_id} non est\u00e1 dispo\u00f1ible."
+        }
+    },
+    "issues": {
+        "invalid_server_version": {
+            "description": "Comproba se hai actualizaci\u00f3ns dispo\u00f1ibles para o servidor ou a integraci\u00f3n de Music Assistant.",
+            "title": "O servidor de Music Assistant non ten a versi\u00f3n correcta"
+        }
+    },
+    "selector": {
+        "album_type": {
+            "options": {
+                "album": "\u00c1lbum",
+                "compilation": "Recompilaci\u00f3n",
+                "ep": "EP",
+                "single": "\u00danico",
+                "unknown": "Desco\u00f1ecido"
+            }
+        },
+        "enqueue": {
+            "options": {
+                "add": "Engadir \u00e1 cola",
+                "next": "Reproducir a continuaci\u00f3n",
+                "play": "Reproducir",
+                "replace": "Reproducir agora e baleirar a cola",
+                "replace_next": "Reproducir a continuaci\u00f3n e baleirar a cola"
+            }
+        },
+        "media_type": {
+            "options": {
+                "album": "\u00c1lbum",
+                "artist": "Artista",
+                "audiobook": "Audiolibro",
+                "folder": "Cartafol",
+                "playlist": "Lista de reproduci\u00f3n",
+                "podcast": "Podcast",
+                "radio": "Radio",
+                "track": "Pista"
+            }
+        },
+        "order_by": {
+            "options": {
+                "artist_name": "Nome do artista",
+                "artist_name_desc": "Nome do artista (desc.)",
+                "last_played": "\u00daltimo reproducido",
+                "last_played_desc": "\u00daltimo reproducido (desc.)",
+                "name": "Nome",
+                "name_desc": "Nome (desc.)",
+                "play_count": "N\u00famero de reproduci\u00f3ns",
+                "play_count_desc": "N\u00famero de reproduci\u00f3ns (desc.)",
+                "position": "Posici\u00f3n",
+                "position_desc": "Posici\u00f3n (desc.)",
+                "random": "Aleatorio",
+                "random_play_count": "Aleatorio + menos reproducidos",
+                "sort_name": "Nome de ordenaci\u00f3n",
+                "sort_name_desc": "Nome de ordenaci\u00f3n (desc.)",
+                "timestamp_added": "Engadido",
+                "timestamp_added_desc": "Engadido (desc.)",
+                "year": "Ano",
+                "year_desc": "Ano (desc.)"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "description": "Obt\u00e9n elementos dunha biblioteca de Music Assistant.",
+            "fields": {
+                "album_artists_only": {
+                    "description": "Devolver s\u00f3 os artistas de \u00e1lbum ao listar os elementos da biblioteca de artistas.",
+                    "name": "Activar o filtro de artistas de \u00e1lbum (s\u00f3 biblioteca de artistas)"
+                },
+                "album_type": {
+                    "description": "Filtrar os \u00e1lbums por tipo.",
+                    "name": "Filtro por tipo de \u00e1lbum (s\u00f3 biblioteca de \u00e1lbums)"
+                },
+                "config_entry_id": {
+                    "description": "Selecciona a instancia de Music Assistant na que se fai a busca.",
+                    "name": "Instancia de Music Assistant"
+                },
+                "favorite": {
+                    "description": "Filtrar polo estado de favorito. Act\u00edvao para devolver s\u00f3 os elementos que che gustan, desact\u00edvao para devolver s\u00f3 os que non che gustan, ou omite o campo para devolver todos os elementos.",
+                    "name": "Estado de favorito"
+                },
+                "limit": {
+                    "description": "N\u00famero m\u00e1ximo de elementos que se devolven.",
+                    "name": "L\u00edmite"
+                },
+                "media_type": {
+                    "description": "O tipo multimedia do que se solicitan os detalles.",
+                    "name": "Tipo de contido multimedia"
+                },
+                "offset": {
+                    "description": "Desprazamento desde o que comeza a lista.",
+                    "name": "Desprazamento"
+                },
+                "order_by": {
+                    "description": "Ordenar a lista por este campo.",
+                    "name": "Ordenar por"
+                },
+                "search": {
+                    "description": "Cadea opcional para buscar nesta biblioteca.",
+                    "name": "Buscar"
+                },
+                "username": {
+                    "description": "Nome de usuario de Music Assistant usado nesta solicitude. Ao indicalo, respectaranse os filtros de provedores configurados polo usuario.",
+                    "name": "Nome de usuario"
+                }
+            },
+            "name": "Obter elementos da biblioteca",
+            "sections": {
+                "pagination": {
+                    "name": "Paxinaci\u00f3n"
+                }
+            }
+        },
+        "get_queue": {
+            "description": "Obt\u00e9n os detalles da cola activa dun reprodutor de Music Assistant.",
+            "name": "Obter os detalles da cola do reprodutor"
+        },
+        "play_announcement": {
+            "description": "Reproduce un anuncio nun reprodutor de Music Assistant con opci\u00f3ns de control m\u00e1is precisas.",
+            "fields": {
+                "announce_volume": {
+                    "description": "Usar un nivel de volume forzado para o anuncio. Om\u00edteo para usar o predeterminado do reprodutor.",
+                    "name": "Volume do anuncio"
+                },
+                "message": {
+                    "description": "Texto que se anuncia, falado pola entidade de texto a voz seleccionada. Indica unha mensaxe ou un URL.",
+                    "name": "Mensaxe"
+                },
+                "pre_announce_url": {
+                    "description": "URL do son de preanuncio.",
+                    "name": "URL do preanuncio"
+                },
+                "tts_entity_id": {
+                    "description": "Entidade de texto a voz que fala a mensaxe. Obrigatoria cando se indica unha mensaxe.",
+                    "name": "Entidade de texto a voz"
+                },
+                "url": {
+                    "description": "URL do son da notificaci\u00f3n. Indica unha mensaxe ou un URL.",
+                    "name": "URL"
+                },
+                "use_pre_announce": {
+                    "description": "Usar o son de preanuncio no anuncio. Om\u00edteo para usar o predeterminado do reprodutor.",
+                    "name": "Usar o preanuncio"
+                }
+            },
+            "name": "Reproducir un anuncio"
+        },
+        "play_media": {
+            "description": "Reproduce contido nun reprodutor de Music Assistant con opci\u00f3ns de control m\u00e1is precisas.",
+            "fields": {
+                "album": {
+                    "description": "Ao indicar unha pista polo nome no campo ID multimedia, podes restrinxir os resultados por este nome de \u00e1lbum.",
+                    "name": "Nome do \u00e1lbum"
+                },
+                "artist": {
+                    "description": "Ao indicar unha pista ou \u00e1lbum polo nome no campo ID multimedia, podes restrinxir os resultados por este nome de artista.",
+                    "name": "Nome do artista"
+                },
+                "enqueue": {
+                    "description": "Se o contido se reproduce agora ou se engade \u00e1 cola.",
+                    "name": "P\u00f3r na cola"
+                },
+                "media_id": {
+                    "description": "URI ou nome do elemento que queres reproducir. Indica unha lista se queres reproducir ou po\u00f1er na cola varios elementos.",
+                    "name": "ID(s) multimedia"
+                },
+                "media_type": {
+                    "description": "O tipo de contido que se reproduce, como artista, \u00e1lbum, pista ou lista de reproduci\u00f3n. Se se omite, determ\u00ednase automaticamente.",
+                    "name": "Tipo de contido multimedia"
+                },
+                "radio_mode": {
+                    "description": "Activa o modo radio para xerar automaticamente unha lista de reproduci\u00f3n a partir da selecci\u00f3n.",
+                    "name": "Activar o modo radio"
+                },
+                "start_item": {
+                    "description": "Elemento desde o que comeza a reproduci\u00f3n, en vez do primeiro. Usa `latest` para reproducir un podcast desde o episodio m\u00e1is recente, ou indica o URI, o ID ou parte do nome (polo menos 3 caracteres) da pista ou episodio desde o que comezar.",
+                    "name": "Elemento inicial"
+                },
+                "username": {
+                    "description": "Nome de usuario de Music Assistant usado na solicitude de reproduci\u00f3n. Afecta \u00e1 entrada do historial de reproduci\u00f3n e tam\u00e9n ten en conta os filtros de provedores dun elemento, se est\u00e1n configurados. Por defecto, \u00fasase o usuario de Home Assistant que fixo a solicitude, cando o seu nome coincide cun usuario de Music Assistant.",
+                    "name": "Nome de usuario"
+                }
+            },
+            "name": "Reproducir contido"
+        },
+        "search": {
+            "description": "Fai unha busca global na biblioteca de Music Assistant e en todos os provedores.",
+            "fields": {
+                "album": {
+                    "description": "Ao indicar un nome de pista no campo de nome, podes restrinxir os resultados por este nome de \u00e1lbum.",
+                    "name": "Nome do \u00e1lbum"
+                },
+                "artist": {
+                    "description": "Ao indicar un nome de pista ou \u00e1lbum no campo de nome, podes restrinxir os resultados por este nome de artista.",
+                    "name": "Nome do artista"
+                },
+                "config_entry_id": {
+                    "description": "Selecciona a instancia de Music Assistant na que se fai a busca.",
+                    "name": "Instancia de Music Assistant"
+                },
+                "library_only": {
+                    "description": "Inclu\u00edr s\u00f3 os resultados que estean na biblioteca.",
+                    "name": "S\u00f3 elementos da biblioteca"
+                },
+                "limit": {
+                    "description": "N\u00famero m\u00e1ximo de elementos que se devolven (por tipo multimedia).",
+                    "name": "L\u00edmite"
+                },
+                "media_type": {
+                    "description": "O tipo de contido que se busca, como artista, \u00e1lbum, pista, radio ou lista de reproduci\u00f3n. Se se omite, todos os tipos.",
+                    "name": "Tipo(s) multimedia"
+                },
+                "name": {
+                    "description": "O nome/t\u00edtulo que se busca.",
+                    "name": "Buscar nome"
+                },
+                "username": {
+                    "description": "Nome de usuario de Music Assistant usado na busca. As buscas respectan os filtros de provedores configurados polo usuario.",
+                    "name": "Nome de usuario"
+                }
+            },
+            "name": "Buscar en Music Assistant",
+            "sections": {
+                "search_options": {
+                    "name": "Opci\u00f3ns de busca"
+                }
+            }
+        },
+        "transfer_queue": {
+            "description": "Transfire a cola dun reprodutor a outro.",
+            "fields": {
+                "auto_play": {
+                    "description": "Comezar a reproducir a cola no reprodutor de destino. Om\u00edteo para usar o comportamento predeterminado.",
+                    "name": "Reproduci\u00f3n autom\u00e1tica"
+                },
+                "source_player": {
+                    "description": "O reprodutor de orixe que ten a cola que queres transferir. Se se omite, usarase o primeiro reprodutor que estea a reproducir.",
+                    "name": "Reprodutor de orixe"
+                }
+            },
+            "name": "Transferir a cola"
+        }
+    }
+}

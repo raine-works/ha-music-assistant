@@ -1,0 +1,40 @@
+{
+    "config": {
+        "step": {
+            "discovery_confirm": {
+                "title": "Opdagede Music Assistant-server"
+            },
+            "hassio_confirm": {
+                "title": "Opdagede Music Assistant-app"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "surround_decoder_type": {
+                "state": {
+                    "toggle": "Omskift til/fra"
+                }
+            }
+        }
+    },
+    "selector": {
+        "media_type": {
+            "options": {
+                "playlist": "Playliste"
+            }
+        }
+    },
+    "services": {
+        "get_library": {
+            "fields": {
+                "search": {
+                    "name": "S\u00f8g"
+                }
+            }
+        },
+        "search": {
+            "name": "S\u00f8g i Music Assistant"
+        }
+    }
+}
