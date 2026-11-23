@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.11.2.4
+
+- The manifest pins `music-assistant-client==1.6.0` (the version Home Assistant 2026.11.2 pins) instead of a
+  minimum, and the test requirements are pinned.
+
 ## 2026.11.2.3
 
 - The icon is Music Assistant's own (from Home Assistant's brands), with a note that this fork
