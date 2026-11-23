@@ -1,0 +1,32 @@
+# Claude reviews every pull request against the rules, and answers replies to its comments. The workflow is Raineworks', in
+# raine-works/agents (.github/workflows/code-review.yml): this file only calls it, and comes from the raineworks-base skill's
+# templates/workflows/code-review.yml. Change the workflow there, for every repository at once; here, only its inputs
+# (with:). The Base rules check moves the pin when the shared workflows change.
+name: Code review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  pull_request_review_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+  actions: read
+
+jobs:
+  code-review:
+    name: Code review
+    uses: raine-works/agents/.github/workflows/code-review.yml@bcc3f92307e34338be03ec7f6a243c3435604800 # raine-works/agents master
+    secrets: inherit
+    with:
+      focus: |
+        - The fork stays small: its own code lives in `extended.py` (plus one line in `services.py` and its entries in `services.yaml` and `strings.json`). A change to upstream-synced code needs a reason, since it conflicts with every sync from Home Assistant core (`scripts/sync-upstream.sh`).
+        - The event loop is never blocked: no sync I/O or long CPU work in the actions or entities; all Music Assistant calls go through `music-assistant-client`, awaited.
+        - The added actions (`get_queue_items`, `edit_queue`, `set_dont_stop_the_music`, `get_podcast_episodes`, `get_party_url`): inputs validated with `probatio` schemas, bad input and missing players or servers raise `ServiceValidationError`, server failures raise `HomeAssistantError`, and each is declared in `services.yaml` and `strings.json` and documented in `docs/reference/actions.md`.
+        - Config entry lifecycle: setup and unload clean up the client connection, listeners and tasks; a connection failure is `ConfigEntryNotReady`; discovery (zeroconf) and the config flow handle an unreachable or unsupported server; the Music Assistant server URL, tokens and Party guest links are never logged or put in diagnostics unredacted.
+        - Releases: `manifest.json` `version` is bumped (Home Assistant release plus a revision, never 1.0), `CHANGELOG.md` has an entry, and `UPSTREAM`, `hacs.json` and `requirements-test.txt` agree with the followed release. hassfest and HACS validation must still pass (sorted manifest keys, a minimum `music-assistant-client`).
+        - Tests: every new action, entity or failure path has a test in `tests/components/music_assistant/` (`test_extended.py` for the fork's own), including snapshots where core uses them; the tests stay at core's style; ruff on `custom_components` passes with core's settings.
+        - Attribution: the Apache 2.0 `NOTICE` and the not-affiliated-with-Music-Assistant wording stay intact, and the docs describe what the code does.
