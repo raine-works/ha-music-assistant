@@ -31,4 +31,4 @@ Keep the fork's changes small and in `extended.py`: the pure functions there (`q
 
 ## Releasing
 
-Change the manifest's version (a Home Assistant release plus a revision, never 1.0), add a CHANGELOG entry and push to `master`. When the Test workflow passes, the Release workflow publishes `v<version>`. See [Following Home Assistant](following-home-assistant.md).
+On a branch, change the manifest's version (a Home Assistant release plus a revision, never 1.0), add a CHANGELOG entry and open a pull request. Once it's reviewed and merged to `master` and the Test workflow passes, the Release workflow publishes `v<version>`. See [Following Home Assistant](following-home-assistant.md).
