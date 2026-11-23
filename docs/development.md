@@ -21,7 +21,7 @@ uv venv --python 3.14 .venv && uv pip install -r requirements-test.txt
 .venv/bin/python -m pytest -q
 ```
 
-[The Test workflow](../.github/workflows/test.yaml) runs the same three steps on pushes to `master` and on pull requests. [The Validate workflow](../.github/workflows/validate.yaml) runs hassfest and the repository checks of the Home Assistant Marketplace's validation action, weekly too.
+[The Test workflow](../.github/workflows/test.yaml) runs the same three steps on pushes to `master` and on pull requests. [The Validate workflow](../.github/workflows/validate.yaml) runs hassfest and the repository checks of the Home Assistant Marketplace's validation action, weekly too. Both run from images pinned by digest, which [the Image pins workflow](../.github/workflows/image-pins.yml) moves on weekly, by pull request.
 
 Keep the fork's changes small and in `extended.py`: the pure functions there (`queue_page()`, `episode_page()`) shape Music Assistant's answers and are tested without a server.
 

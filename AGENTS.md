@@ -51,5 +51,5 @@ read [Following Home Assistant](docs/following-home-assistant.md) before touchin
   Home Assistant depends on"), so a minimum is the only form that passes `validate.yaml`. Raise the minimum with the
   followed release.
 - Moving to a new Home Assistant release also sets `UPSTREAM`, `homeassistant` in `hacs.json` and the
-  `pytest-homeassistant` pin in `requirements-test.txt`, and moves the hassfest image's digest in `validate.yaml` on
-  ([Following Home Assistant](docs/following-home-assistant.md)).
+  `pytest-homeassistant` pin in `requirements-test.txt` ([Following Home Assistant](docs/following-home-assistant.md)).
+  The hassfest and HACS images in `validate.yaml` are moved weekly by Image pins (`image-pins.yml`), by pull request.
