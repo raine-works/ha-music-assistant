@@ -13,4 +13,4 @@ mutagen==1.48.1
 pygbl==1.2.0
 serialx==1.15.1
 universal-silabs-flasher==1.3.0
-ruff
+ruff==0.17.6
