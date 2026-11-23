@@ -46,5 +46,9 @@ read [Following Home Assistant](docs/following-home-assistant.md) before touchin
   Home Assistant release plus a revision, like `2026.11.2.3`, never 1.0), add a `CHANGELOG.md` entry, and merge to
   `master`. `release.yaml` then publishes `v<version>` once `Test` passes; a push that doesn't change the version
   releases nothing.
+- **Dependency exception:** `manifest.json` requires `music-assistant-client>=1.6.0`, a range, on purpose. Home
+  Assistant's own requirements already pin that package, and hassfest fails an exact `==` pin of one ("pins a package
+  Home Assistant depends on"), so a minimum is the only form that passes `validate.yaml`. Raise the minimum with the
+  followed release.
 - Moving to a new Home Assistant release also sets `UPSTREAM`, `homeassistant` in `hacs.json` and the
   `pytest-homeassistant` pin in `requirements-test.txt`.
