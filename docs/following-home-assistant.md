@@ -26,7 +26,7 @@ Then:
 
 1. Put the fork's changes back in (the line in `services.py`, the entries in `services.yaml` and `strings.json`, the manifest's own fields).
 2. Update the translations: `pip install homeassistant==<release>`, then copy its `components/music_assistant/translations`.
-3. Set `UPSTREAM`, the manifest's `version`, `homeassistant` in `hacs.json` and `requirements-test.txt`'s `pytest-homeassistant-custom-component` to the release.
+3. Set `UPSTREAM`, the manifest's `version`, `homeassistant` in `hacs.json` and `requirements-test.txt`'s `pytest-homeassistant-custom-component` to the release, and move the hassfest image's digest in [validate.yaml](../.github/workflows/validate.yaml) on to the current one, so hassfest checks against that release's rules.
 4. Run the lint and tests, and add a [CHANGELOG.md](../CHANGELOG.md) entry.
 
 ## Releases
